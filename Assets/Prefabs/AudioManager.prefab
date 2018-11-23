@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1534224453943758}
+  m_IsPrefabParent: 1
+--- !u!1 &1534224453943758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4320846278555890}
+  - component: {fileID: 114440803957798172}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4320846278555890
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534224453943758}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114440803957798172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534224453943758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6936fbaa76d419a40991e1947cbaf24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Menu
+    audio: {fileID: 8300000, guid: 403bc10e7d064a94f96a8f8997fcb727, type: 3}
+    volume: 1
+    PlayOnAwake: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Glitch 3.0
+    audio: {fileID: 8300000, guid: bab547d6bdf33c444b7e781ba827115a, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Caindo
+    audio: {fileID: 8300000, guid: f593f4cf5c0084842a113df59d5166a4, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Shot
+    audio: {fileID: 8300000, guid: 5bc140bad780a0b4b9fa323bb6a472e6, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Transition
+    audio: {fileID: 8300000, guid: 3457ba592fba4e943bd20bae7a90acc3, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: MissedBall
+    audio: {fileID: 8300000, guid: ff0c5551eb516ea4f834c9646a0ab87d, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Crack
+    audio: {fileID: 8300000, guid: 87592b49a7a7df6428fe13c919bd957d, type: 3}
+    volume: 0.3
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    audio: {fileID: 8300000, guid: 67044b7bb572e424da9896fde03122a7, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PlusBall
+    audio: {fileID: 8300000, guid: 03a794ac89455a84f85a966ee8793527, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
