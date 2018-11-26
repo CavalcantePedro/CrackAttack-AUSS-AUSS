@@ -12,6 +12,9 @@ TagManager:
   - DarkBlue
   - Error
   - Yellow
+  - Top
+  - Right
+  - Left
   layers:
   - Default
   - TransparentFX
