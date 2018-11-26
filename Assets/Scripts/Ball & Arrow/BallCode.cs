@@ -32,14 +32,39 @@ public class BallCode : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		audioSource.Play();	
+
+		audioSource.Play();
+		float neg = Random.Range(-ballForce/4, -ballForce/8);
+		float pos = Random.Range(0, ballForce);
+
+		switch(coll.gameObject.tag){
+			case "Top":
+				rb.AddForce(new Vector2(neg, 0));
+				break;
+			case "ScreenBottom":
+				rb.AddForce(new Vector2(pos, 0));
+				break;
+
+				case "Player":
+				rb.AddForce(new Vector2(pos, 0));	
+				break;
+			case "Left":
+				rb.AddForce(new Vector2(0, pos));
+				break;
+				case "Right":
+				rb.AddForce(new Vector2(0, neg));
+			break;
+		}
 	}
+
+
+	
 
     void FixedUpdate()
     {
 		//Clamp velocity;
-        
-        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -4, 4), Mathf.Clamp(rb.velocity.y, -4, 4));   
+        print(rb.velocity);
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -3, 3), Mathf.Clamp(rb.velocity.y, -3, 3));   
     }
     #endregion PhysicsUpdate
 

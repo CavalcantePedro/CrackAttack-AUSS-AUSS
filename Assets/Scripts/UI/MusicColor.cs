@@ -12,7 +12,7 @@ public class MusicColor : MonoBehaviour {
 	}
 
 	void Update () {
-		print(AudioManager.instance.GetMusicTime("Glitch 3.0"));
+		//print(AudioManager.instance.GetMusicTime("Glitch 3.0"));
 		
 		if(AudioManager.instance.GetMusicTime("Glitch 3.0") >= 8f)
 		{
