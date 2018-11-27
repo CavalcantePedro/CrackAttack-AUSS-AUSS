@@ -9,6 +9,9 @@ public class BallCode : MonoBehaviour {
 	[SerializeField] private CircleCollider2D circleColl;
 	[SerializeField] private AudioSource audioSource;
 
+	[SerializeField] private float xRandomForce;
+	[SerializeField] private float yRandomForce;
+
 	void OnEnable() {
 		Shot();
 		Invoke("IgnoreCollision", 0.25f);
@@ -19,7 +22,45 @@ public class BallCode : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "ScreenBottom")
 		{
-			//Get instance;
+			BallHitedBottom();
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+
+		audioSource.Play();
+		
+
+		switch(coll.gameObject.tag)
+		{
+
+			case "Top":
+				rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y * -1);
+				GenerateForce();
+				rb.AddForce(new Vector2(xRandomForce, yRandomForce));
+				break;
+
+			case "Player":
+				rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y * -1);
+				GenerateForce();
+				rb.AddForce(new Vector2(xRandomForce, yRandomForce));	
+				break;
+
+			case "Left":
+				GenerateForce();
+				rb.AddForce(new Vector2(-xRandomForce, yRandomForce));
+				break;
+
+			case "Right":
+				GenerateForce();
+				rb.AddForce(new Vector2(xRandomForce, yRandomForce));
+				break;
+		}
+	}
+
+	void BallHitedBottom()
+	{
+		//Get instance;
 			Singleton instance = Singleton.GetInstance;
             AudioManager.instance.Play("MissedBall");
 			instance.cameraScript.CameraShake();
@@ -28,37 +69,7 @@ public class BallCode : MonoBehaviour {
 			instance.playerScript.ballsHitted = 0;
 			instance.playerScript.activeBall--;
 			gameObject.SetActive(false);
-		}
 	}
-
-	void OnCollisionEnter2D(Collision2D coll) {
-
-		audioSource.Play();
-		float neg = Random.Range(-ballForce/4, -ballForce/8);
-		float pos = Random.Range(0, ballForce);
-
-		switch(coll.gameObject.tag){
-			case "Top":
-				rb.AddForce(new Vector2(neg, 0));
-				break;
-			case "ScreenBottom":
-				rb.AddForce(new Vector2(pos, 0));
-				break;
-
-				case "Player":
-				rb.AddForce(new Vector2(pos, 0));	
-				break;
-			case "Left":
-				rb.AddForce(new Vector2(0, pos));
-				break;
-				case "Right":
-				rb.AddForce(new Vector2(0, neg));
-			break;
-		}
-	}
-
-
-	
 
     void FixedUpdate()
     {
@@ -74,6 +85,22 @@ public class BallCode : MonoBehaviour {
 		var rotationZ = Singleton.GetInstance.ballShot.rotZ;
 		Vector3 dir = Quaternion.AngleAxis(rotationZ, Vector3.forward) * Vector3.right;
   		rb.AddForce(dir * ballForce);
+	}
+
+	void GenerateForce()
+	{
+		if(rb.velocity.y > 0)
+		{
+		xRandomForce = Random.Range(50,251);
+		yRandomForce = ballForce - xRandomForce;
+		}
+
+		else if(rb.velocity.y < 0)
+		{
+		xRandomForce = Random.Range(-250,-51 );
+		yRandomForce = (ballForce - xRandomForce) *-1;
+		}
+
 	}
 
 	void IgnoreCollision(){

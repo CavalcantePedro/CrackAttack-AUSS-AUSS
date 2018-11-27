@@ -26,7 +26,7 @@ public class PaddleController : MonoBehaviour {
     {
         
             
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-2.5f ,2.5f) , transform.position.y);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-2.7f ,2.7f) , transform.position.y);
         rb.velocity = new Vector2 (Mathf.Clamp(rb.velocity.x ,-speed * Time.deltaTime, speed * Time.deltaTime) , rb.velocity.y);
     }
 

@@ -23,12 +23,12 @@ public class PlayerLosedTransition : MonoBehaviour {
         oneParticle.Pause();
         zeroParticle.Pause();
         ObjectPooler.instance.StopAllBalls();
-        GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = false;
+        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = false;
         AudioManager.instance.StopAll();
         yield return new WaitForSeconds(2f);
         animGlitchUp.SetBool("glitching",true);
         animGlitchDown.SetBool("glitching",true);
-        GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = true;
+        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = true;
         AudioManager.instance.Play("Transition");
         
         yield return new WaitForSeconds(1.5f);
