@@ -5,32 +5,59 @@ using UnityEngine.SceneManagement;
 
 
 public class PixelDestroyer : MonoBehaviour {
-
 	private ObjectPoolerParticles objParticles;
-
+	
 	void Start()
 	 {
 
 		objParticles = Singleton.GetInstance.objectParticles;
 		
 	 }
+
+	 private void CountingPixels(Collision2D coll)
+	 {
+		 Singleton.GetInstance.gm.totalPixelsDestroyed++;
+		 Singleton.GetInstance.gm.heartGainPixels++;
+
+		 switch(coll.gameObject.tag)
+		 {
+			 case "Pink":
+
+             Singleton.GetInstance.gm.pinkPixelsDestroyed++;
+
+			 break;
+
+			 case "Green":
+
+             Singleton.GetInstance.gm.greenPixelsDestroyed++;
+
+			 break;
+
+			 case "Blue":
+
+			 Singleton.GetInstance.gm.bluePixelsDestroyed++;
+
+			 break;
+		 }
+
+
+	 }
 	private void OnCollisionEnter2D(Collision2D coll) 
 	{
 		
-		if(coll.gameObject.tag == this.gameObject.tag || this.gameObject.tag == "Untagged" )
+		if(coll.gameObject.tag == this.gameObject.tag)
 		{
-            Singleton.GetInstance.gm.totalPixelsDestroyed++;
-			print(Singleton.GetInstance.gm.heartGainPixels);
-			Singleton.GetInstance.gm.heartGainPixels++;
+            CountingPixels(coll);
+
             if (Singleton.GetInstance.gm.totalPixelsDestroyed >= Singleton.GetInstance.gm.totalPixels * 0.7)
            {
                 SceneManager.LoadScene(4);
         	}
 
-			else if(Singleton.GetInstance.gm.totalPixelsDestroyed >= Singleton.GetInstance.gm.totalPixels * 0.15)
+			else if(Singleton.GetInstance.gm.heartGainPixels >= Singleton.GetInstance.gm.totalPixels * 0.15)
 			{
 				Singleton.GetInstance.gm.heartGainPixels = 0; 
-				print("ganhou um coraçao");
+				Instantiate(Singleton.GetInstance.collectableHeart ,transform.position,Quaternion.identity);
 			}
            
 			AudioManager.instance.Play("Crack");
@@ -43,4 +70,5 @@ public class PixelDestroyer : MonoBehaviour {
 			gameObject.SetActive(false);
 		}  
 	}
+
 }

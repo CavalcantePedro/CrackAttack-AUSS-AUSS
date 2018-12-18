@@ -25,6 +25,8 @@ public class Singleton : MonoBehaviour {
 
     public PlayerLosedTransition transitionToGameOver;
 	public ObjectPoolerParticles objectParticles;
+	
+	public GameObject collectableHeart;
 
     private static Singleton instance;
 	
