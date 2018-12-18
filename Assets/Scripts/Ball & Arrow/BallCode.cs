@@ -74,7 +74,7 @@ public class BallCode : MonoBehaviour {
     void FixedUpdate()
     {
 		//Clamp velocity;
-        print(rb.velocity);
+        
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -3, 3), Mathf.Clamp(rb.velocity.y, -3, 3));   
     }
     #endregion PhysicsUpdate
