@@ -13,6 +13,8 @@ public class PaddleController : MonoBehaviour {
     public Collider2D coll;
     public BallCount ballCountScript;
     public Animator plusOneBall;
+
+    public ParticleSystem[] heartGainParticles;
   
 
 	void Start (){
@@ -23,9 +25,7 @@ public class PaddleController : MonoBehaviour {
 	}
 
     void Update()
-    {
-        
-            
+    {      
         transform.position = new Vector3(Mathf.Clamp(transform.position.x,-2.7f ,2.7f) , transform.position.y);
         rb.velocity = new Vector2 (Mathf.Clamp(rb.velocity.x ,-speed * Time.deltaTime, speed * Time.deltaTime) , rb.velocity.y);
     }
@@ -37,6 +37,17 @@ public class PaddleController : MonoBehaviour {
         {
             ballsHitted++;
             AddingBalls();
+        }
+
+        if(coll.gameObject.tag == "CollectableHeart")
+        {
+            
+            coll.gameObject.SetActive(false);
+            if(health < 3)
+            {
+            health++;
+           AddingHearts();
+           }
         }
     }
     #endregion
@@ -57,6 +68,17 @@ public class PaddleController : MonoBehaviour {
                 
             }
         }
+    }
+
+    void AddingHearts()
+    {
+          for(int i=0;i<heartGainParticles.Length;i++)
+            {
+             heartGainParticles[i].Play();
+            }
+            Singleton.GetInstance.healthUI.LifeCheck(health);
+        
+
     }
     
     public void DecreasingBalls()

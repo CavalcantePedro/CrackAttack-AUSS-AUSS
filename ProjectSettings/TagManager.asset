@@ -15,6 +15,7 @@ TagManager:
   - Top
   - Right
   - Left
+  - CollectableHeart
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - 
   - Ball
   - Robot
-  - 
-  - 
+  - CollectableHeart
+  - Player
   - 
   - 
   - 

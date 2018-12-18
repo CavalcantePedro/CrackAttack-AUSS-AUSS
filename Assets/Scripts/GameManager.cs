@@ -10,11 +10,28 @@ public class GameManager : MonoBehaviour {
     public ArrowsController arrow;
     public JoystickController joystick;
     public GameObject arrowsUI;
-    public int pixelsDestroyed;
-
     public GameObject shotTutorial;
-
     public GameObject swipeTutorial;
+
+    //Pixels Related
+
+    //begin
+    [HideInInspector]public int totalPixels = 1050;
+    [HideInInspector]public int pinkPixels = 500;
+    [HideInInspector]public int bluePixels = 382;
+    [HideInInspector]public int greenPixels = 168;
+    [HideInInspector]public int heartGainPixels;
+
+    //current
+    [HideInInspector]public int totalPixelsDestroyed;   
+    [HideInInspector]public int pinkPixelsDestroyed;   
+    [HideInInspector]public int bluePixelsDestroyed;
+    [HideInInspector]public int greenPixelsDestroyed;
+    
+
+
+    
+    
 
     void Start () {
 
@@ -30,7 +47,7 @@ if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
             shotTutorial.SetActive(true);
         }
          
-        pixelsDestroyed = 0;
+        totalPixelsDestroyed = 0;
         AudioManager audio = AudioManager.instance;
         if(audio != null){
             audio.StopAll();
