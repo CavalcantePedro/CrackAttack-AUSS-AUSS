@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class RobotScreen : MonoBehaviour {
 
-	private int percentTotal;
-	private int percentPink;
-	private int percentGreen;
-	private int percentBlue;
+	private float percentTotal;
+	private float percentPink;
+	private float percentGreen;
+	private float percentBlue;
 
 	//HUD
 	public GameObject totalPercent;
@@ -29,20 +29,29 @@ public class RobotScreen : MonoBehaviour {
 	StartCoroutine(ChangingScreens());
 
     }
+
+	public void StopChanging()
+	{
+		colorPercent.SetActive(false);
+		totalPercent.SetActive(false);
+		aussAndAuss.SetActive(true);
+		StopAllCoroutines();
+	}
+
 	IEnumerator PercentPixels()
 	{   
 		for(;;)
 		{
-        percentPink = 100 * (Singleton.GetInstance.gm.pinkPixels - Singleton.GetInstance.gm.pinkPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels;
+        percentPink = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.pinkPixels - Singleton.GetInstance.gm.pinkPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
 		pinkPercentUI.text = percentPink + "%";
 
-		percentGreen = 100 * (Singleton.GetInstance.gm.greenPixels - Singleton.GetInstance.gm.greenPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels;
+		percentGreen = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.greenPixels - Singleton.GetInstance.gm.greenPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
 		greenPercentUI.text = percentGreen+ "%";
 
-		percentBlue = 100 * (Singleton.GetInstance.gm.bluePixels - Singleton.GetInstance.gm.bluePixelsDestroyed) / Singleton.GetInstance.gm.totalPixels;
+		percentBlue = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.bluePixels - Singleton.GetInstance.gm.bluePixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
 		bluePercentUI.text = percentBlue + "%";
 
-		percentTotal = 100 * (Singleton.GetInstance.gm.totalPixels - Singleton.GetInstance.gm.totalPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels;
+		percentTotal = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.totalPixels - Singleton.GetInstance.gm.totalPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
 		totalPercentUI.text = percentTotal +"%"; 
 
 		yield return new WaitForSeconds (0.5f);

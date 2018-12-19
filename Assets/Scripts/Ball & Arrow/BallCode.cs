@@ -43,6 +43,25 @@ public class BallCode : MonoBehaviour {
 			case "Player":
 				rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y * -1);
 				GenerateForce();
+				if(Singleton.GetInstance.playerScript.rb.velocity.x > 0)
+				{
+					//tem q ir pra direita
+					if(xRandomForce < 0)
+					{
+						xRandomForce = xRandomForce * -1;
+					}
+				}
+
+				if(Singleton.GetInstance.playerScript.rb.velocity.x < 0)
+				{
+					//tem q ir pra esquerda
+					if(xRandomForce > 0)
+					{
+						xRandomForce = xRandomForce * -1;
+					}
+				}
+				
+
 				rb.AddForce(new Vector2(xRandomForce, yRandomForce));	
 				break;
 
