@@ -28,6 +28,8 @@ public class Singleton : MonoBehaviour {
 	
 	public GameObject collectableHeart;
 
+	public RobotScreen robotScreen;
+
     private static Singleton instance;
 	
 
