@@ -17,10 +17,19 @@ public class GameManager : MonoBehaviour {
 
     //begin
     [HideInInspector]public int totalPixels = 1050;
-    [HideInInspector]public int pinkPixels = 500;
-    [HideInInspector]public int bluePixels = 382;
-    [HideInInspector]public int greenPixels = 168;
+    [HideInInspector]public int pinkPixels;
+    [HideInInspector]public int bluePixels;
+    [HideInInspector]public int greenPixels;
     [HideInInspector]public int heartGainPixels;
+
+    //spawning
+    [HideInInspector]public int canSpawnPinkPixels;
+    [HideInInspector]public int canSpawnBluePixels;
+    [HideInInspector]public int canSpawnGreenPixels;
+
+    private int pinkRate;
+    private int blueRate;
+    private int greenRate;
 
     //current
     [HideInInspector]public int totalPixelsDestroyed;   
@@ -28,13 +37,9 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]public int bluePixelsDestroyed;
     [HideInInspector]public int greenPixelsDestroyed;
     
-
-
-    
-    
-
     void Start () {
 
+        GeneratingColorRate();
 if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
         {
             swipeTutorial.SetActive(true);
@@ -91,6 +96,25 @@ if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
             joystick.enabled = true;
         }
 
+    }
+
+    void GeneratingColorRate()
+    {
+        pinkRate = Random.Range(20,46);
+        blueRate = Random.Range(20,46);
+        greenRate = 100 - pinkRate - blueRate;
+
+        canSpawnPinkPixels  = pinkRate * totalPixels / 100;
+        canSpawnBluePixels  = blueRate * totalPixels / 100;
+        canSpawnGreenPixels = greenRate * totalPixels/ 100 + 1;
+
+        pinkPixels = canSpawnPinkPixels;
+        bluePixels = canSpawnBluePixels;
+        greenPixels = canSpawnGreenPixels;
+
+        print("pink " + canSpawnPinkPixels);
+         print("blue " + canSpawnBluePixels);
+          print("green " + canSpawnGreenPixels);
     }
 
 }

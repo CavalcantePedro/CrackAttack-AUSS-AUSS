@@ -8,6 +8,6 @@ public class BallCount : MonoBehaviour {
 	[SerializeField] private Text textCount;
 	
 	public void UpdateUI (int ballCount) {
-		textCount.text =  "X" + ballCount;
+		textCount.text =  "" + ballCount;
 	}
 }

@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class PixelDestroyer : MonoBehaviour {
 	private ObjectPoolerParticles objParticles;
+	private SpriteRenderer sp;
+	private int willSpawn;
+	private bool hasColor;
 	
 	void Start()
 	 {
-
+		sp = GetComponent<SpriteRenderer>();
+		StartCoroutine(ChoosingColors());
 		objParticles = Singleton.GetInstance.objectParticles;
 		
 	 }
@@ -40,6 +44,41 @@ public class PixelDestroyer : MonoBehaviour {
 			 break;
 		 }
 
+
+	 }
+
+	 IEnumerator ChoosingColors()
+	 {
+		 while(!hasColor)
+		 {
+		//0 = Pink / 1 = Green / 2 = Blue
+		willSpawn =  Random.Range(0,3);
+		if(willSpawn == 0 && Singleton.GetInstance.gm.canSpawnPinkPixels > 0)
+		{
+			sp.color = Singleton.GetInstance.ssHeartColors[0];
+			Singleton.GetInstance.gm.canSpawnPinkPixels--;
+			this.gameObject.tag = "Pink";
+			hasColor = true;
+		}
+
+		else if(willSpawn == 1 && Singleton.GetInstance.gm.canSpawnGreenPixels > 0)
+		{
+			sp.color = Singleton.GetInstance.ssHeartColors[1];
+			Singleton.GetInstance.gm.canSpawnGreenPixels--;
+			this.gameObject.tag = "Green";
+			hasColor = true;
+		}
+
+		else if(willSpawn == 2 && Singleton.GetInstance.gm.canSpawnPinkPixels > 0)
+		{
+			sp.color = Singleton.GetInstance.ssHeartColors[2];
+			Singleton.GetInstance.gm.canSpawnBluePixels--;
+			this.gameObject.tag = "Blue";
+			hasColor = true;
+		}
+		
+		yield return new WaitForSeconds(0.5f);
+		}
 
 	 }
 	private void OnCollisionEnter2D(Collision2D coll) 
