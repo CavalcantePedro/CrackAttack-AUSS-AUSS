@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Singleton : MonoBehaviour {
 
+	public Color[] ssHeartColors;
     public GameObject player;
 
 	public PaddleController playerScript;
