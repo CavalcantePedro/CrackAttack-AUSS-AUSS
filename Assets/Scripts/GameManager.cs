@@ -39,8 +39,13 @@ public class GameManager : MonoBehaviour {
     
     void Start () {
 
+        /*
+                    * Apenas para teste *
+
+            PlayerPrefs.SetString("PlayerMovement", "joyStick");
+        */
         GeneratingColorRate();
-if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
+        if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
         {
             swipeTutorial.SetActive(true);
             shotTutorial.SetActive(true);
@@ -48,7 +53,6 @@ if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
 
         else if(PlayerPrefs.GetString("PlayerMovement") == "arrows")
         {
-            
             shotTutorial.SetActive(true);
         }
          
@@ -113,8 +117,8 @@ if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
         greenPixels = canSpawnGreenPixels;
 
         print("pink " + canSpawnPinkPixels);
-         print("blue " + canSpawnBluePixels);
-          print("green " + canSpawnGreenPixels);
+        print("blue " + canSpawnBluePixels);
+        print("green " + canSpawnGreenPixels);
     }
 
 }
