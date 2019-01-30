@@ -26,7 +26,7 @@ public class SwipeController : MoveController {
                 ballShot.changeColor = false;
                 if(gm.shotTutorial.activeSelf)
                 {
-                gm.shotTutorial.SetActive(false);
+                    gm.shotTutorial.SetActive(false);
                 }
             }
 
