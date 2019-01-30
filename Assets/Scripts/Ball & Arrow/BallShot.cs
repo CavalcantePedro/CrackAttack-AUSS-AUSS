@@ -25,7 +25,7 @@ public class BallShot : MonoBehaviour {
 	{
 		changeColor = true;
 
-		//angleArrow.SetActive(false);
+		angleArrow.SetActive(false);
 		StartCoroutine(SetColor());
     }
 
