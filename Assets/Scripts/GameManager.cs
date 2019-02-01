@@ -39,11 +39,8 @@ public class GameManager : MonoBehaviour {
     
     void Start () {
 
-        /*
-                    * Apenas para teste *
-
-            PlayerPrefs.SetString("PlayerMovement", "joyStick");
-        */
+        PlayerPrefs.SetString("PlayerMovement", "joyStick");
+        
         GeneratingColorRate();
         if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
         {
