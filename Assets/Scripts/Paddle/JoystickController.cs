@@ -51,7 +51,7 @@ public class JoystickController : MoveController {
 
 	void Move(){
 		float x = Input.GetAxisRaw("Horizontal");
-		rb.velocity = new Vector2(x * (speed * 2) * Time.deltaTime, 0);
+		rb.velocity = new Vector2(x * (speed * 1.7f) * Time.deltaTime, 0);
 	}
 
 	void MoveTarget(){

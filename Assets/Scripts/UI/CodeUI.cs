@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CodeUI : MonoBehaviour {
@@ -14,6 +15,9 @@ public class CodeUI : MonoBehaviour {
 	public Animator anim2;
 	private Rigidbody2D rb;
 
+	[SerializeField] private Button btnSettings;
+	[SerializeField] private Button btnCredits;
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		sp = GetComponent<SpriteRenderer>();
@@ -22,6 +26,8 @@ public class CodeUI : MonoBehaviour {
 	public void Fall()
 	{
 		rb.gravityScale = 0.5f;
+		btnCredits.interactable = false;
+		btnSettings.interactable = false;
 	}
 
 	IEnumerator ChangingScene()
@@ -45,7 +51,6 @@ public class CodeUI : MonoBehaviour {
 		oneParticle.Pause();
 		AudioManager.instance.Play("Caindo");
 		StartCoroutine(ChangingScene());
-		
 	}
 
 	void GameInit()
@@ -53,6 +58,6 @@ public class CodeUI : MonoBehaviour {
 		SceneManager.LoadScene(sceneBuildIndex: 1);
 	}
 	
-	}
+}
 
 	

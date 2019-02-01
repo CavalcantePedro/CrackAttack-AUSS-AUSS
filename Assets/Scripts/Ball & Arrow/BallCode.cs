@@ -14,7 +14,7 @@ public class BallCode : MonoBehaviour {
 
 	void OnEnable() {
 		Shot();
-		Invoke("IgnoreCollision", 0.25f);
+		Invoke("IgnoreCollision", 0.15f);
 	}
 
     #region PhysicsUpdate
@@ -117,14 +117,14 @@ public class BallCode : MonoBehaviour {
 	{
 		if(rb.velocity.y > 0)
 		{
-		xRandomForce = Random.Range(50,251);
-		yRandomForce = ballForce - xRandomForce;
+			xRandomForce = Random.Range(50,251);
+			yRandomForce = ballForce - xRandomForce;
 		}
 
 		else if(rb.velocity.y < 0)
 		{
-		xRandomForce = Random.Range(-250,-51 );
-		yRandomForce = (ballForce - xRandomForce) *-1;
+			xRandomForce = Random.Range(-250,-51 );
+			yRandomForce = (ballForce - xRandomForce) *-1;
 		}
 
 	}

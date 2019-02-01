@@ -21,8 +21,13 @@ public class SceneController : MonoBehaviour
         StartCoroutine(MenuScene());
     }
 
-    IEnumerator SettingsScene(){       
+    public void TransitionToCredits(){
+        StartCoroutine(CreditsScene());
+    }
 
+    IEnumerator SettingsScene(){       
+        
+        yield return new WaitForSeconds(0.5f);
         anim.SetBool("glitching",true);
 		anim2.SetBool("glitching",true);
         yield return new WaitForSeconds(0.1f);
@@ -32,11 +37,23 @@ public class SceneController : MonoBehaviour
     }
 
     IEnumerator MenuScene(){
+
+        yield return new WaitForSeconds(0.5f);
         anim.SetBool("glitching",true);
 		anim2.SetBool("glitching",true);
         yield return new WaitForSeconds(0.1f);
         AudioManager.instance.Play("Transition");
         yield return new WaitForSeconds(1.7f);
         SceneManager.LoadScene("MainMenu");
+    }
+
+    IEnumerator CreditsScene(){
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("glitching",true);
+		anim2.SetBool("glitching",true);
+        yield return new WaitForSeconds(0.1f);
+        AudioManager.instance.Play("Transition");
+        yield return new WaitForSeconds(1.7f);
+        SceneManager.LoadScene("Credits");
     }
 }
