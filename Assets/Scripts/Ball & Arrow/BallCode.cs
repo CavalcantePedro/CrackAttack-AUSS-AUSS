@@ -37,7 +37,14 @@ public class BallCode : MonoBehaviour {
 			case "Top":
 				rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y * -1);
 				GenerateForce();
+				if(rb.velocity.x > 0)
+				{
 				rb.AddForce(new Vector2(xRandomForce, yRandomForce));
+				}
+				else
+				{rb.AddForce(new Vector2(-xRandomForce, yRandomForce));
+
+				} 
 				break;
 
 			case "Player":
