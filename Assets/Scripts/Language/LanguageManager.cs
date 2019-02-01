@@ -11,11 +11,11 @@ public class LanguageManager : MonoBehaviour
         Language Index:
         0 - English
         1 - Portuguese
-     */
+    */
 
     void Awake()
     {
-        if(PlayerPrefs.HasKey("Language")){
+        if(!PlayerPrefs.HasKey("Language")){
             PlayerPrefs.SetInt("Language", 0);
         }
     }

@@ -22,7 +22,7 @@ public class PainelController : MonoBehaviour
         index = 1;
     }
 
-    public void RightBtn(){
+    public void LeftBtn(){
         if(index == 1){
             pnAnim.SetTrigger("SlideRight_1");
             right.SetActive(false);
@@ -40,7 +40,7 @@ public class PainelController : MonoBehaviour
         }
     }
 
-    public void LeftBtn(){
+    public void RightBtn(){
         if(index == 2){
             pnAnim.SetTrigger("SlideLeft_0");
             right.SetActive(true);
