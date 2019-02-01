@@ -6,15 +6,20 @@ using UnityEngine.SceneManagement;
 public class SceneScript : MonoBehaviour {
 
     private float delay;
+    [SerializeField] private SceneController sc;
 
     private void Start() {
         if (SceneManager.GetActiveScene().buildIndex == 3)
         {          
             delay = 33f;
-            StartCoroutine(ChangingTheScene(0,delay));
-    
+            Invoke("CreditsToMenu", delay);
         }
     }
+
+    void CreditsToMenu(){
+        sc.TransitionToMenu();
+    }
+
     public void SetDelay(float inputDelay)
     {
        delay = inputDelay;
