@@ -8,6 +8,7 @@ public class SetGlitch : MonoBehaviour {
 	public float delayTime;
     public bool glitchWithoutClick;
 	public bool glitchAll;
+	
 	void Start () {
 		anim = GetComponent<Animator>();
         if (glitchWithoutClick)
