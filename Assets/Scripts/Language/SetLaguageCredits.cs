@@ -43,11 +43,11 @@ public class SetLaguageCredits : MonoBehaviour
 
                         "\n\nProgramming Team:"+
 
-                        "\nPedro Ricardo Cavalcanti"+
+                        "\nPedro Ricardo Cavalcante Silva Filho"+
                         "\nRabih Tabatchnik"+
                         "\nMateus Francisco S. Lima"+
 
-                        "\nSpecial Thanks:"+
+                        "\n\nSpecial Thanks:"+
 
                         "\nDANIEL DE SANT'ANNA"+
                         "\nErika Pessoa"+
@@ -73,7 +73,7 @@ public class SetLaguageCredits : MonoBehaviour
 
                         "\n\nEquipe de Programação:"+
 
-                        "\nPedro Ricardo Cavalcanti"+
+                        "\nPedro Ricardo Cavalcante Silva Filho"+
                         "\nRabih Tabatchnik"+
                         "\nMateus Francisco S. Lima"+
 

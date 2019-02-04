@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glitch
       objectReference: {fileID: 0}
+    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224993315681137182, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -596,8 +600,8 @@ MonoBehaviour:
     Dias, do Projeto Nave em Recife, Pernambuco.\n\nEquipe de Arte:\n\nAntonio Luan
     Vasconcelos\nWillian Carlos B. de Oliveira\nMaria Eduarda Alexandre\nDarlane Raquel
     Do N. Marinho\nJo\xE3o Guilherme\n\nSound Design:\n\nGabriel Marques\n\nEquipe
-    de Programa\xE7\xE3o:\n\nPedro Ricardo Cavalcanti\nRabih Tabatchnik\nMateus Francisco
-    S. Lima\n\nAgradecimentos Especiais:\n\nDANIEL DE SANT'ANNA\nErika Pessoa\nAndr\xE9
+    de Programa\xE7\xE3o:\n\nPedro Ricardo Cavalcante Silva Filho\nRabih Tabatchnik\nMateus
+    Francisco S. Lima\n\nAgradecimentos Especiais:\n\nDANIEL DE SANT'ANNA\nErika Pessoa\nAndr\xE9
     Oliveira\nLuiz Eduardo Brayner\nYoutuber : Geri\n"
 --- !u!222 &968118301
 CanvasRenderer:
