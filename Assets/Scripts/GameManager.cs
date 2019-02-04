@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
     //Pixels Related
 
     //begin
-    [HideInInspector]public int totalPixels = 280;
+    [HideInInspector]public int totalPixels = 70;
     [HideInInspector]public int pinkPixels;
     [HideInInspector]public int bluePixels;
     [HideInInspector]public int greenPixels;
