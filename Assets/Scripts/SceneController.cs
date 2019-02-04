@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-
     public Animator anim;
 	public Animator anim2;
-    
+
     public void ChangeScene(string name){
         SceneManager.LoadScene(name);
     }

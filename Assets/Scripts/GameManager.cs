@@ -117,5 +117,4 @@ public class GameManager : MonoBehaviour {
         print("blue " + canSpawnBluePixels);
         print("green " + canSpawnGreenPixels);
     }
-
 }

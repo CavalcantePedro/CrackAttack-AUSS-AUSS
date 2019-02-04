@@ -100,7 +100,6 @@ public class BallCode : MonoBehaviour {
     void FixedUpdate()
     {
 		//Clamp velocity;
-        
         rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -3, 3), Mathf.Clamp(rb.velocity.y, -3, 3));   
     }
     #endregion PhysicsUpdate
@@ -127,6 +126,10 @@ public class BallCode : MonoBehaviour {
 			yRandomForce = (ballForce - xRandomForce) *-1;
 		}
 
+	}
+
+	void OnDestroy() {
+		print("BallCode");	
 	}
 
 	void IgnoreCollision(){

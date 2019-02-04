@@ -42,19 +42,19 @@ public class RobotScreen : MonoBehaviour {
 	{   
 		for(;;)
 		{
-        percentPink = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.pinkPixels - Singleton.GetInstance.gm.pinkPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
-		pinkPercentUI.text = percentPink + "%";
+			percentPink = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.pinkPixels - Singleton.GetInstance.gm.pinkPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
+			pinkPercentUI.text = percentPink + "%";
 
-		percentGreen = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.greenPixels - Singleton.GetInstance.gm.greenPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
-		greenPercentUI.text = percentGreen+ "%";
+			percentGreen = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.greenPixels - Singleton.GetInstance.gm.greenPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
+			greenPercentUI.text = percentGreen+ "%";
 
-		percentBlue = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.bluePixels - Singleton.GetInstance.gm.bluePixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
-		bluePercentUI.text = percentBlue + "%";
+			percentBlue = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.bluePixels - Singleton.GetInstance.gm.bluePixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
+			bluePercentUI.text = percentBlue + "%";
 
-		percentTotal = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.totalPixels - Singleton.GetInstance.gm.totalPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
-		totalPercentUI.text = percentTotal +"%"; 
+			percentTotal = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.totalPixels - Singleton.GetInstance.gm.totalPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
+			totalPercentUI.text = percentTotal +"%"; 
 
-		yield return new WaitForSeconds (0.5f);
+			yield return new WaitForSeconds (0.5f);
 		}
 	}
 

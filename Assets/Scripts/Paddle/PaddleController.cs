@@ -45,9 +45,9 @@ public class PaddleController : MonoBehaviour {
             coll.gameObject.SetActive(false);
             if(health < 3)
             {
-            health++;
-           AddingHearts();
-           }
+                health++;
+                AddingHearts();
+            }
         }
     }
     #endregion
@@ -65,7 +65,6 @@ public class PaddleController : MonoBehaviour {
                 AudioManager.instance.Play("PlusBall");
                 plusOneBall.SetTrigger("appear");
                 ballCountScript.UpdateUI(ballCount);
-                
             }
         }
     }
@@ -73,12 +72,10 @@ public class PaddleController : MonoBehaviour {
     void AddingHearts()
     {
           for(int i=0;i<heartGainParticles.Length;i++)
-            {
-             heartGainParticles[i].Play();
-            }
-            Singleton.GetInstance.healthUI.LifeCheck(health);
-        
-
+        {
+            heartGainParticles[i].Play();
+        }
+        Singleton.GetInstance.healthUI.LifeCheck(health);
     }
     
     public void DecreasingBalls()

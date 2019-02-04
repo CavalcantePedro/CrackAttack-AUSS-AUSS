@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 
 public class PixelDestroyer : MonoBehaviour {
+	
 	private ObjectPoolerParticles objParticles;
 	private SpriteRenderer sp;
 	private int willSpawn;
