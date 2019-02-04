@@ -55,7 +55,7 @@ public class CodeUI : MonoBehaviour {
 
 	void GameInit()
 	{
-		SceneManager.LoadScene(sceneBuildIndex: 1);
+		SceneManager.LoadScene(sceneBuildIndex: 2);
 	}
 	
 }

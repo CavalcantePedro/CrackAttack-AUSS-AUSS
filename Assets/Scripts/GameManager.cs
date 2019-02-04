@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
     //Pixels Related
 
     //begin
-    [HideInInspector]public int totalPixels = 279;
+    [HideInInspector]public int totalPixels = 280;
     [HideInInspector]public int pinkPixels;
     [HideInInspector]public int bluePixels;
     [HideInInspector]public int greenPixels;
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour {
     
     void Start () {
 
-        PlayerPrefs.SetString("PlayerMovement", "joyStick");
+        //PlayerPrefs.SetString("PlayerMovement", "joyStick");
         
         GeneratingColorRate();
         if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour {
         {
             arrowsUI.SetActive(false);
             arrow.enabled = false;
-            joystick.enabled = false;
+           joystick.enabled = false;
             swipe.enabled = true;
             
         }
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour {
             arrowsUI.SetActive(false);
             arrow.enabled = false;
             swipe.enabled = false; 
-            joystick.enabled = true;
+           joystick.enabled = true;
         }
 
     }
