@@ -14,6 +14,9 @@ public class PaddleController : MonoBehaviour {
     public BallCount ballCountScript;
     public Animator plusOneBall;
 
+    public Animator plusTwoBall;
+    public Animator plusThreeBall;
+
     public ParticleSystem[] heartGainParticles;
   
 
@@ -55,18 +58,53 @@ public class PaddleController : MonoBehaviour {
     #region BallController
     void AddingBalls()
     {
-        if (ballsHitted == 3)
-        {
-            //Add a ball;
-            ballsHitted = 0;
-            if (ballCount < 8 && (ballCount + activeBall) < 8)
+
+      switch (ballsHitted)
+      {
+          case 1:
+          if (ballCount < 8 && (ballCount + activeBall) < 8)
+           {       
+               AudioManager.instance.Play("PlusBall");
+               plusOneBall.SetTrigger("appear");
+               ballCountScript.UpdateUI(ballCount);
+               
+            }
+
+           break;
+     
+          case 2:
+          if (ballCount < 8 && (ballCount + activeBall) < 8)
             {
-                ballCount++;
                 AudioManager.instance.Play("PlusBall");
-                plusOneBall.SetTrigger("appear");
+                plusTwoBall.SetTrigger("appear");
                 ballCountScript.UpdateUI(ballCount);
             }
-        }
+          break;
+
+          case 3:
+          ballsHitted = 0;
+          if (ballCount < 8 && (ballCount + activeBall) < 8)
+           {
+               ballCount++;
+               AudioManager.instance.Play("PlusBall");
+               plusThreeBall.SetTrigger("appear");
+                ballCountScript.UpdateUI(ballCount);
+           }
+          break;
+     
+      }
+      //  if (ballsHitted == 1)
+      //  {
+            //Add a ball;
+       //     ballsHitted = 0;
+       //     if (ballCount < 8 && (ballCount + activeBall) < 8)
+       //     {
+        //        ballCount++;
+        //        AudioManager.instance.Play("PlusBall");
+         //       plusOneBall.SetTrigger("appear");
+         //       ballCountScript.UpdateUI(ballCount);
+         //   }
+      //  }
     }
 
     void AddingHearts()
