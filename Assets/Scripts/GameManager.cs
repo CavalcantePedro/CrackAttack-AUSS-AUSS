@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour {
     //Pixels Related
 
     //begin
-    [HideInInspector]public int totalPixels = 70;
+    [Range(70,280)]
+    public int totalPixels;
     [HideInInspector]public int pinkPixels;
     [HideInInspector]public int bluePixels;
     [HideInInspector]public int greenPixels;
@@ -38,9 +39,13 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]public int greenPixelsDestroyed;
     
     void Start () {
-
-        //PlayerPrefs.SetString("PlayerMovement", "joyStick");
         
+        //se tiver no pc vai ser joystick
+        if(!Application.isMobilePlatform)
+        {
+       PlayerPrefs.SetString("PlayerMovement", "joyStick");
+        }
+        print("ac" + totalPixels);
         GeneratingColorRate();
         if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
         {
@@ -107,12 +112,13 @@ public class GameManager : MonoBehaviour {
 
         canSpawnPinkPixels  = pinkRate * totalPixels / 100;
         canSpawnBluePixels  = blueRate * totalPixels / 100;
-        canSpawnGreenPixels = greenRate * totalPixels/ 100 + 1;
+        canSpawnGreenPixels = greenRate * totalPixels/ 100 ;
 
         pinkPixels = canSpawnPinkPixels;
         bluePixels = canSpawnBluePixels;
         greenPixels = canSpawnGreenPixels;
 
+       print("dc" + totalPixels);
         print("pink " + canSpawnPinkPixels);
         print("blue " + canSpawnBluePixels);
         print("green " + canSpawnGreenPixels);

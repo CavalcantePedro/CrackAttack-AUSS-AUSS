@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwipeController : MoveController {
 
     public bool isMovingWithSwipe { get; private set; }
-    private Collider2D coll;
+    [SerializeField]private Collider2D coll;
 
     public GameManager gm;
 
@@ -13,7 +13,7 @@ public class SwipeController : MoveController {
     {
         ballShot.isJoystick = false;
         rb = paddle.rb;
-        coll = paddle.coll;
+        //coll = paddle.coll;
     }
 
     private void Update()
