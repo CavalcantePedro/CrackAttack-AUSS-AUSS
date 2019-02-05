@@ -18,9 +18,9 @@ public class PixelDestroyer : MonoBehaviour {
 		objParticles = Singleton.GetInstance.objectParticles;
 		
 	 }
-//(Collider2D coll)
 //
-	 private void CountingPixels(Collision2D coll)
+//(Collision2D coll)
+	 private void CountingPixels(Collider2D coll)
 	 {
 		 Singleton.GetInstance.gm.totalPixelsDestroyed++;
 		 Singleton.GetInstance.gm.heartGainPixels++;
@@ -84,21 +84,21 @@ public class PixelDestroyer : MonoBehaviour {
 
 	 }
 
-     //OnTriggerEnter2D(Collider2D coll)
-	 //
-	private void OnCollisionEnter2D(Collision2D coll) 
+     //
+	 //OnCollisionEnter2D(Collision2D coll)
+	private void OnTriggerEnter2D(Collider2D coll) 
 	{
 		
 		if(coll.gameObject.tag == this.gameObject.tag)
 		{
             CountingPixels(coll);
 
-            if (Singleton.GetInstance.gm.totalPixelsDestroyed >= Singleton.GetInstance.gm.totalPixels * 0.7)
+            if (Singleton.GetInstance.gm.totalPixelsDestroyed == Singleton.GetInstance.gm.totalPixels)
            {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(5);
         	}
 
-			else if(Singleton.GetInstance.gm.heartGainPixels >= Singleton.GetInstance.gm.totalPixels * 0.15)
+			else if(Singleton.GetInstance.gm.heartGainPixels >= Singleton.GetInstance.gm.totalPixels * 0.35)
 			{
 				Singleton.GetInstance.gm.heartGainPixels = 0; 
 				Instantiate(Singleton.GetInstance.collectableHeart ,transform.position,Quaternion.identity);

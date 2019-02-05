@@ -14,7 +14,7 @@ public class BallCode : MonoBehaviour {
 
 	void OnEnable() {
 		Shot();
-		Invoke("IgnoreCollision", 0.15f);
+		Invoke("IgnoreCollision", 0.25f);
 	}
 
     #region PhysicsUpdate
@@ -48,7 +48,17 @@ public class BallCode : MonoBehaviour {
 				break;
 
 			case "Player":
+
+				if(rb.velocity.y < 0)
+				{
 				rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y * -1);
+				}
+
+				else if (rb.velocity.y > 0)
+				{
+					rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y);
+				}
+
 				GenerateForce();
 				if(Singleton.GetInstance.playerScript.rb.velocity.x > 0)
 				{
