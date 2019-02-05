@@ -39,7 +39,10 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]public int greenPixelsDestroyed;
     
     void Start () {
-        
+        totalPixelsDestroyed = 0;
+        pinkPixelsDestroyed = 0;   
+        bluePixelsDestroyed = 0;
+        greenPixelsDestroyed = 0;
         //se tiver no pc vai ser joystick
         if(!Application.isMobilePlatform)
         {
@@ -106,13 +109,13 @@ public class GameManager : MonoBehaviour {
 
     void GeneratingColorRate()
     {
-        pinkRate = Random.Range(20,46);
-        blueRate = Random.Range(20,46);
-        greenRate = 100 - pinkRate - blueRate;
+        pinkRate =46; //Random.Range(20,46);
+        blueRate =46; //Random.Range(20,46);
+        greenRate = 8;//100 - pinkRate - blueRate;
 
-        canSpawnPinkPixels  = pinkRate * totalPixels / 100;
-        canSpawnBluePixels  = blueRate * totalPixels / 100;
-        canSpawnGreenPixels = greenRate * totalPixels/ 100 ;
+        canSpawnPinkPixels  = Mathf.CeilToInt(pinkRate * totalPixels / 100);
+        canSpawnBluePixels  = Mathf.CeilToInt(blueRate * totalPixels / 100);
+        canSpawnGreenPixels = Mathf.CeilToInt(greenRate * totalPixels/ 100);
 
         pinkPixels = canSpawnPinkPixels;
         bluePixels = canSpawnBluePixels;
