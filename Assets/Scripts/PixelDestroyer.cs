@@ -18,9 +18,9 @@ public class PixelDestroyer : MonoBehaviour {
 		objParticles = Singleton.GetInstance.objectParticles;
 		
 	 }
-//(Collider2D coll)
 //
-	 private void CountingPixels(Collision2D coll)
+//(Collision2D coll)
+	 private void CountingPixels(Collider2D coll)
 	 {
 		 Singleton.GetInstance.gm.totalPixelsDestroyed++;
 		 Singleton.GetInstance.gm.heartGainPixels++;
@@ -84,9 +84,9 @@ public class PixelDestroyer : MonoBehaviour {
 
 	 }
 
-     //OnTriggerEnter2D(Collider2D coll)
-	 //
-	private void OnCollisionEnter2D(Collision2D coll)
+     //
+	 //OnCollisionEnter2D(Collision2D coll)
+	private void OnTriggerEnter2D(Collider2D coll)
 	{
 		
 		if(coll.gameObject.tag == this.gameObject.tag)
@@ -95,6 +95,14 @@ public class PixelDestroyer : MonoBehaviour {
 
             if (Singleton.GetInstance.gm.totalPixelsDestroyed == Singleton.GetInstance.gm.totalPixels)
            {
+			   int score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
+			   
+
+			if(score > PlayerPrefs.GetInt("Score") || !PlayerPrefs.HasKey("Score"))
+			{
+			   PlayerPrefs.SetInt("Score" , score);
+			   PlayerPrefs.Save();
+			}
                 SceneManager.LoadScene(5);
         	}
 
