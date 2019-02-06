@@ -9,8 +9,8 @@ public class TimerCount : MonoBehaviour {
     public BallShot ballShot;
     public float velocitySwap;
     public bool runTime;
-    float seconds, totalSeconds, variance;
-    int minutes;
+    [HideInInspector]public float seconds, totalSeconds, variance;
+   [HideInInspector]public int minutes;
     int secondsUI;
     [SerializeField] Text timeUI;
 

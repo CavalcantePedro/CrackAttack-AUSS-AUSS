@@ -31,6 +31,8 @@ public class Singleton : MonoBehaviour {
 
 	public RobotScreen robotScreen;
 
+	public TimerCount time;
+
     private static Singleton instance;
 	
 
