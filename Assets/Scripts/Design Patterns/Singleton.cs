@@ -6,6 +6,7 @@ using UnityEngine;
 public class Singleton : MonoBehaviour {
 
 	public Color[] ssHeartColors;
+
     public GameObject player;
 
 	public PaddleController playerScript;
@@ -25,6 +26,7 @@ public class Singleton : MonoBehaviour {
 	public HealthUI healthUI;
 
     public PlayerLosedTransition transitionToGameOver;
+	
 	public ObjectPoolerParticles objectParticles;
 	
 	public GameObject collectableHeart;

@@ -19,6 +19,7 @@ public class GameColorBlind : MonoBehaviour
 
     void Start()
     {
+        HearthColor();
         for (int i = 0; i < robots.Length; i++)
         {
             if(i != PlayerPrefs.GetInt("ColorBlind")){
@@ -29,10 +30,40 @@ public class GameColorBlind : MonoBehaviour
         ChangeColor();
     }
 
+    void HearthColor(){
+        switch(PlayerPrefs.GetInt("ColorBlind")){
+            case 0:
+                Singleton.GetInstance.ssHeartColors[0] = originalColor[0];
+                Singleton.GetInstance.ssHeartColors[1] = originalColor[2];
+                Singleton.GetInstance.ssHeartColors[2] = originalColor[1];
+                print("Ori");
+            break;
+
+            case 1:
+                Singleton.GetInstance.ssHeartColors[0] = dic[0];
+                Singleton.GetInstance.ssHeartColors[1] = dic[2];
+                Singleton.GetInstance.ssHeartColors[2] = dic[1];
+                print("Dic");
+            break;
+
+            case 2:
+                Singleton.GetInstance.ssHeartColors[0] = mon[0];
+                Singleton.GetInstance.ssHeartColors[1] = mon[2];
+                Singleton.GetInstance.ssHeartColors[2] = mon[1];
+                print("Mon");
+            break;
+
+            case 3:
+                Singleton.GetInstance.ssHeartColors[0] = tri[0];
+                Singleton.GetInstance.ssHeartColors[1] = tri[1];
+                Singleton.GetInstance.ssHeartColors[2] = tri[2];
+                print("Tri");
+            break;
+        }
+    }
+
     void ChangeColor(){
 
-
-        PlayerPrefs.SetInt("ColorBlind", 3);
         switch(PlayerPrefs.GetInt("ColorBlind")){
             case 0:
                 pinkTxt.color = originalColor[0];

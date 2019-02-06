@@ -24,7 +24,7 @@ public class BallShot : MonoBehaviour {
     void Start() 
 	{
 		changeColor = true;
-
+		SetColorsPaddle();	
 		angleArrow.SetActive(false);
 		StartCoroutine(SetColor());
     }
@@ -40,6 +40,12 @@ public class BallShot : MonoBehaviour {
 			rotZ = Mathf.Clamp(rotZ, limits[0], limits[1]);
 			transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 		}
+	}
+
+	void SetColorsPaddle(){
+		colors[0].color = Singleton.GetInstance.ssHeartColors[0];
+		colors[1].color = Singleton.GetInstance.ssHeartColors[2];
+		colors[2].color = Singleton.GetInstance.ssHeartColors[1];
 	}
 
 	public Vector3 Difference()
