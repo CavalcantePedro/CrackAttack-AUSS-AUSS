@@ -109,17 +109,17 @@ public class GameManager : MonoBehaviour {
 
     void GeneratingColorRate()
     {
-        pinkRate =46; //Random.Range(20,46);
-        blueRate =46; //Random.Range(20,46);
-        greenRate = 8;//100 - pinkRate - blueRate;
+        pinkRate =Random.Range(20,46);
+        blueRate =Random.Range(20,46);
+        greenRate = 100 - pinkRate - blueRate;
 
         canSpawnPinkPixels  = Mathf.CeilToInt(pinkRate * totalPixels / 100);
         canSpawnBluePixels  = Mathf.CeilToInt(blueRate * totalPixels / 100);
         canSpawnGreenPixels = Mathf.CeilToInt(greenRate * totalPixels/ 100);
 
-        pinkPixels = canSpawnPinkPixels;
-        bluePixels = canSpawnBluePixels;
-        greenPixels = canSpawnGreenPixels;
+        pinkPixels = canSpawnPinkPixels +1;
+        bluePixels = canSpawnBluePixels +1;
+        greenPixels = canSpawnGreenPixels + 1;
 
        print("dc" + totalPixels);
         print("pink " + canSpawnPinkPixels);
