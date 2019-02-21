@@ -18,9 +18,9 @@ public class PixelDestroyer : MonoBehaviour {
 		objParticles = Singleton.GetInstance.objectParticles;
 		
 	 }
+//(Collider2D coll)
 //
-//(Collision2D coll)
-	 private void CountingPixels(Collider2D coll)
+	 private void CountingPixels(Collision2D coll)
 	 {
 		 Singleton.GetInstance.gm.totalPixelsDestroyed++;
 		 Singleton.GetInstance.gm.heartGainPixels++;
@@ -84,9 +84,9 @@ public class PixelDestroyer : MonoBehaviour {
 
 	 }
 
-     //
-	 //OnCollisionEnter2D(Collision2D coll)
-	private void OnTriggerEnter2D(Collider2D coll)
+     //OnTriggerEnter2D(Collider2D coll)
+	 //
+	private void OnCollisionEnter2D(Collision2D coll)
 	{
 		
 		if(coll.gameObject.tag == this.gameObject.tag)
