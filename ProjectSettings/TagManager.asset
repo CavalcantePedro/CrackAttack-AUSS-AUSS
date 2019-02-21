@@ -16,6 +16,7 @@ TagManager:
   - Right
   - Left
   - CollectableHeart
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Robot
   - CollectableHeart
   - Player
-  - 
+  - Shield
   - 
   - 
   - 
