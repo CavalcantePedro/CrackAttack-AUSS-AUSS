@@ -8,6 +8,10 @@ public class SceneScript : MonoBehaviour {
     private float delay;
     [SerializeField] private SceneController sc;
 
+    public void ChangeScene(string name){
+        SceneManager.LoadScene(name);
+    }
+
     private void Start() {
         if (SceneManager.GetActiveScene().buildIndex == 4)
         {          
