@@ -384,7 +384,7 @@ GameObject:
 --- !u!199 &212062739
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5970,7 +5970,7 @@ GameObject:
 --- !u!199 &823111760
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11081,7 +11081,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 889393550a71a28459c9e5e617604aae, type: 3}
-    m_FontSize: 150
+    m_FontSize: 125
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -11092,7 +11092,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Daltonism
+  m_Text: Color Blindness
 --- !u!222 &1065442914
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12002,7 +12002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224993315681137182, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}
@@ -12378,6 +12378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls: {fileID: 2078153101}
   language: {fileID: 1219687404}
+  colorBlind: {fileID: 1065442913}
   ptBtn: {fileID: 184582817}
   enBtn: {fileID: 1417583438}
 --- !u!1 &2078153099
