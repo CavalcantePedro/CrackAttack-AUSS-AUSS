@@ -8,6 +8,7 @@ public class SetLaguageSettings : MonoBehaviour
 
     [SerializeField] private Text controls;
     [SerializeField] private Text language;
+    [SerializeField] private Text colorBlind;
 
     [SerializeField] private Text ptBtn;
     [SerializeField] private Text enBtn;
@@ -35,6 +36,7 @@ public class SetLaguageSettings : MonoBehaviour
         //Titles;
         controls.text = "Controls";
         language.text = "Language";
+        colorBlind.text = "Color Blindness";
 
         //Language buttons;
         ptBtn.text = "Portuguese";
@@ -45,6 +47,7 @@ public class SetLaguageSettings : MonoBehaviour
         //Titles;
         controls.text = "Controles";
         language.text = "Idioma";
+        colorBlind.text = "Daltonismo";
 
         //Language buttons;
         ptBtn.text = "Português";
