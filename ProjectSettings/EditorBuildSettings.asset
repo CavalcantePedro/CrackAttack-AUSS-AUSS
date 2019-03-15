@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e19aa501468123e418009e7888e2b362
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/GameB.unity
     guid: 570f8289169d2184284f6f315f04ab92
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Victory.unity
     guid: 537e58c1eb10fd84b8b9d1aa967ff43c
   - enabled: 1
-    path: Assets/Scenes/ShieldLevel.unity
+    path: Assets/Scenes/GameA.unity
     guid: 60730ba95cb0bc84d847f92829b53f8e
   m_configObjects: {}

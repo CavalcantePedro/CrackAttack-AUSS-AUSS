@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4409211217329230}
   - component: {fileID: 114672696316361928}
   - component: {fileID: 114991852339078206}
+  - component: {fileID: 549892629}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663125008151436}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -52,7 +53,7 @@ MonoBehaviour:
   arrowsUI: {fileID: 0}
   shotTutorial: {fileID: 0}
   swipeTutorial: {fileID: 0}
-  totalPixels: 1050
+  totalPixels: 70
   pinkPixels: 0
   bluePixels: 0
   greenPixels: 0
@@ -80,3 +81,17 @@ MonoBehaviour:
   oneParticle: {fileID: 0}
   animGlitchUp: {fileID: 0}
   animGlitchDown: {fileID: 0}
+--- !u!114 &549892629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663125008151436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2327a2a1670c6428729fee2d04af84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dance: 0
+  shield: {fileID: 0}
