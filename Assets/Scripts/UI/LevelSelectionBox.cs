@@ -15,35 +15,55 @@ public class LevelSelectionBox : MonoBehaviour
     [SerializeField] private GameObject minusOneBtn;
     private int levelNumber;
 
+    [Header("Record")]  
+    [SerializeField] private Text recordText;
+    private string recordSt;
+
+    private string recordPlayerPref;
+
+    [Header("Difficulty")]
+    [SerializeField] private Toggle difficultySwitch;
+    [HideInInspector] public string difficulty;
+    
+
     void Start()
     {
         levelNumber = 1;
         ManagingLevels();
+        CheckingRecord();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     public void SelectNextLevel()
     {
         levelNumber++;
         ManagingLevels();
+        CheckingRecord();
     }
 
     public void SelectPreviousLevel()
     {
         levelNumber--;
         ManagingLevels();
+        CheckingRecord();
+    }
+    
+    public void DifficultyChange()
+    {
+        if(difficultySwitch.isOn)
+        {
+            difficulty = "hard";
+        }
+
+        else
+        {
+            difficulty = "easy";
+        }
+
     }
 
     void ManagingLevels()
     {
         numberUI.sprite = numberSprites[levelNumber];
-        print("a");
         numberAnim.SetInteger("TransitionTo",levelNumber);
         switch(levelNumber)
         {
@@ -63,6 +83,41 @@ public class LevelSelectionBox : MonoBehaviour
         }
         break;
         }
+    }
 
+    void CheckingRecord()
+    {
+      switch(levelNumber)
+      {
+          case 1:
+            recordPlayerPref = "Record1";
+          break;
+          
+          case 2:
+            recordPlayerPref = "Record2";
+          break;
+
+          case 3:
+           recordPlayerPref = "Record3";
+          break;
+
+          case 4:
+           recordPlayerPref = "Record4";
+          break;
+      }
+        ShowingRecord();
+    }
+
+    void ShowingRecord()
+    {
+        if(PlayerPrefs.HasKey(recordPlayerPref))
+        {
+            recordSt = PlayerPrefs.GetInt(recordPlayerPref).ToString();
+            recordText.text ="Record:" + recordSt;
+        }
+            else
+        {
+            recordText.text = "Record:0";
+        }
     }
 }

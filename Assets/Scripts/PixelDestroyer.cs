@@ -98,9 +98,9 @@ public class PixelDestroyer : MonoBehaviour {
 			   int score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
 			   
 
-			if(score > PlayerPrefs.GetInt("Score") || !PlayerPrefs.HasKey("Score"))
+			if(score > PlayerPrefs.GetInt("Record1") || !PlayerPrefs.HasKey("Record1"))
 			{
-			   PlayerPrefs.SetInt("Score" , score);
+			   PlayerPrefs.SetInt("Record" , score);
 			   PlayerPrefs.Save();
 			}
                 SceneManager.LoadScene(5);
