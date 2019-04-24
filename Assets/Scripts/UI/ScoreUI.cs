@@ -10,14 +10,6 @@ public class ScoreUI : MonoBehaviour
     private string scoreSt;
     void Start()
     {
-        if(PlayerPrefs.HasKey("Score"))
-        {
-        scoreSt = PlayerPrefs.GetInt("Score").ToString();
-        scoreText.text ="Score:" + scoreSt;
-        }
-        else
-        {
-            scoreText.text = "Score:0";
-        }
+       
     }
 }
