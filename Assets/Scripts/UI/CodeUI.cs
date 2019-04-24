@@ -9,6 +9,8 @@ public class CodeUI : MonoBehaviour {
 	public Color invisible;
 	private SpriteRenderer sp;
 	public GameObject canvas;
+
+	public GameObject levelSelection;
 	public ParticleSystem zeroParticle;
 	public ParticleSystem oneParticle;
 	public Animator anim;
@@ -40,8 +42,8 @@ public class CodeUI : MonoBehaviour {
         AudioManager.instance.Play("Transition");
 		anim.SetBool("glitching",true);
 		anim2.SetBool("glitching",true);
-		yield return new WaitForSeconds(1f);
-		GameInit();
+		yield return new WaitForSeconds(1.5f);
+		levelSelection.SetActive(true);
 		
 	}
 
@@ -53,9 +55,18 @@ public class CodeUI : MonoBehaviour {
 		StartCoroutine(ChangingScene());
 	}
 
-	void GameInit()
+	public void GameInit()
 	{
-		SceneManager.LoadScene(sceneBuildIndex: 2);
+		if (Singleton.GetInstance.ls.difficulty == "hard")
+		{
+          SceneManager.LoadScene(sceneBuildIndex: 2);
+		}
+		else 
+		{
+          SceneManager.LoadScene(sceneBuildIndex: 6);
+		}
+
+		
 	}
 	
 }

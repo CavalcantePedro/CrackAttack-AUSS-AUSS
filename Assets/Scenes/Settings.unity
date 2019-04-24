@@ -5946,6 +5946,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114800907821686696, guid: f8a5d6b72c8c5c44d91d3998e75ce01f,
+        type: 3}
+      propertyPath: EffectMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a3eb28ff03039a4fb08592757f11559, type: 2}
     m_RemovedComponents:
     - {fileID: 114560832486445186, guid: f8a5d6b72c8c5c44d91d3998e75ce01f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f8a5d6b72c8c5c44d91d3998e75ce01f, type: 3}
@@ -11930,7 +11935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -167}
+  m_AnchoredPosition: {x: 0, y: -167.00002}
   m_SizeDelta: {x: 2400, y: -570}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678548115
@@ -12379,8 +12384,6 @@ MonoBehaviour:
   controls: {fileID: 2078153101}
   language: {fileID: 1219687404}
   colorBlind: {fileID: 1065442913}
-  ptBtn: {fileID: 184582817}
-  enBtn: {fileID: 1417583438}
 --- !u!1 &2078153099
 GameObject:
   m_ObjectHideFlags: 0

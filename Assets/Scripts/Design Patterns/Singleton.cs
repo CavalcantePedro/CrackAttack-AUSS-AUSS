@@ -21,6 +21,7 @@ public class Singleton : MonoBehaviour {
 
     public BallCode ballCode;
 
+    public LevelSelectionBox ls;
     public GameManager gm;
 
 	public HealthUI healthUI;
@@ -36,6 +37,8 @@ public class Singleton : MonoBehaviour {
 	public TimerCount time;
 
     private static Singleton instance;
+
+
 	
 
 	public static Singleton GetInstance{
