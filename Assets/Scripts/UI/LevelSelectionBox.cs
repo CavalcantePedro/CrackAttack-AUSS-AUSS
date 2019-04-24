@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectionBox : MonoBehaviour
 {
@@ -120,4 +121,28 @@ public class LevelSelectionBox : MonoBehaviour
             recordText.text = "Record:0";
         }
     }
+
+    void GameInit()
+    {
+        switch(levelNumber)
+            {
+                case 1:
+                PlayerPrefs.SetString("Shield","Off");
+                PlayerPrefs.SetString("Dancing","Off");
+                break;
+                case 2:
+                PlayerPrefs.SetString("Shield","Off");
+                PlayerPrefs.SetString("Dancing","On");
+                break;
+                case 3:
+                PlayerPrefs.SetString("Shield","On");
+                PlayerPrefs.SetString("Dancing","Off");
+                break;
+                case 4:
+                PlayerPrefs.SetString("Shield","On");
+                PlayerPrefs.SetString("Dancing","On");
+                break;
+            }
+    }
+    
 }
