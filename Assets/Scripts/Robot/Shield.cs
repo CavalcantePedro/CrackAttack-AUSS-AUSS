@@ -6,6 +6,7 @@ public class Shield : MonoBehaviour
 {
     [SerializeField] private float shrinkingSpeed;
     [SerializeField] private float expandingDelay;
+    [SerializeField] private float growMaxValue;
 
     [SerializeField] private bool equalGrow;
 
@@ -59,7 +60,7 @@ public class Shield : MonoBehaviour
     void GeneratingExpandValues()
     {
         axisExpandRate = Random.Range(0,100);
-        xGrow = Random.Range(1f,3f);
+        xGrow = Random.Range(1f,growMaxValue);
         if(equalGrow)
         {
             yGrow = xGrow;
@@ -67,7 +68,7 @@ public class Shield : MonoBehaviour
 
         else
         {
-            yGrow = Random.Range(1f,3f);
+            yGrow = Random.Range(1f,growMaxValue);
         }
     }
         
