@@ -29,6 +29,7 @@ public class PaddleController : MonoBehaviour {
 
     void Update()
     {      
+        print(PlayerPrefs.GetInt("Language"));
         transform.position = new Vector3(Mathf.Clamp(transform.position.x,-2.7f ,2.7f) , transform.position.y);
         rb.velocity = new Vector2 (Mathf.Clamp(rb.velocity.x ,-speed * Time.deltaTime, speed * Time.deltaTime) , rb.velocity.y);
     }
@@ -64,7 +65,7 @@ public class PaddleController : MonoBehaviour {
           case 1:
           if (ballCount < 8 && (ballCount + activeBall) < 8)
            {       
-               AudioManager.instance.Play("PlusBall");
+              // AudioManager.instance.Play("PlusBall");
                plusOneBall.SetTrigger("appear");
                ballCountScript.UpdateUI(ballCount);
                
@@ -75,7 +76,7 @@ public class PaddleController : MonoBehaviour {
           case 2:
           if (ballCount < 8 && (ballCount + activeBall) < 8)
             {
-                AudioManager.instance.Play("PlusBall");
+              //  AudioManager.instance.Play("PlusBall");
                 plusTwoBall.SetTrigger("appear");
                 ballCountScript.UpdateUI(ballCount);
             }
@@ -86,7 +87,14 @@ public class PaddleController : MonoBehaviour {
           if (ballCount < 8 && (ballCount + activeBall) < 8)
            {
                ballCount++;
-               AudioManager.instance.Play("PlusBall");
+               print("cheguei aqui");
+
+                if(PlayerPrefs.GetInt("Language") == 1)
+			{
+				//Se  estiver em portugues
+                print("Rodei");
+				 AudioManager.instance.Play("BR_PlusBall1");
+			}     
                plusThreeBall.SetTrigger("appear");
                 ballCountScript.UpdateUI(ballCount);
            }
