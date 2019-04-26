@@ -83,6 +83,7 @@ Material:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - _ScanPoint: 510
 =======
     - _ScanPoint: -100
@@ -102,6 +103,9 @@ Material:
 =======
     - _ScanPoint: 1080
 >>>>>>> 5467536... swift button
+=======
+    - _ScanPoint: 760
+>>>>>>> de7f3c4... Flags Animation
     - _ScanThikness: 15
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
