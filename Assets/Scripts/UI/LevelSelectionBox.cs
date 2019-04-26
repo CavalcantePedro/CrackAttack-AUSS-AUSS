@@ -14,7 +14,7 @@ public class LevelSelectionBox : MonoBehaviour
     [SerializeField] private Animator numberAnim;
     [SerializeField] private GameObject plusOneBtn;
     [SerializeField] private GameObject minusOneBtn;
-    private int levelNumber;
+    [SerializeField] private int levelNumber;
 
     [Header("Record")]  
     [SerializeField] private Text recordText;
@@ -29,7 +29,9 @@ public class LevelSelectionBox : MonoBehaviour
 
     void Start()
     {
+        
         levelNumber = 1;
+        GameInit();
         ManagingLevels();
         CheckingRecord();
     }
@@ -39,6 +41,7 @@ public class LevelSelectionBox : MonoBehaviour
         levelNumber++;
         ManagingLevels();
         CheckingRecord();
+        GameInit();
     }
 
     public void SelectPreviousLevel()
@@ -46,6 +49,7 @@ public class LevelSelectionBox : MonoBehaviour
         levelNumber--;
         ManagingLevels();
         CheckingRecord();
+        GameInit();
     }
     
     public void DifficultyChange()
@@ -88,6 +92,7 @@ public class LevelSelectionBox : MonoBehaviour
 
     void CheckingRecord()
     {
+
       switch(levelNumber)
       {
           case 1:
@@ -127,10 +132,12 @@ public class LevelSelectionBox : MonoBehaviour
         switch(levelNumber)
             {
                 case 1:
+                print("Entrou");
                 PlayerPrefs.SetString("Shield","Off");
                 PlayerPrefs.SetString("Dancing","Off");
                 break;
                 case 2:
+                print("Entrou2");
                 PlayerPrefs.SetString("Shield","Off");
                 PlayerPrefs.SetString("Dancing","On");
                 break;

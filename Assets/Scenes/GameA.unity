@@ -1591,6 +1591,12 @@ MonoBehaviour:
   - {r: 0.93725497, g: 0.3529412, b: 0.93725497, a: 1}
   - {r: 0, g: 1, b: 0.20392159, a: 1}
   - {r: 0.32156864, g: 0.96470594, b: 0.9568628, a: 1}
+  corazon: {fileID: 532668353}
+  robot: {fileID: 324926389}
+  dich: {fileID: 1901472917}
+  mono: {fileID: 1868387156}
+  trich: {fileID: 486975166}
+  shield: {fileID: 1505190231}
   player: {fileID: 1757506070}
   playerScript: {fileID: 1757506072}
   HUDGameplay: {fileID: 1093331282}
@@ -1678,37 +1684,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.05, y: 1}
   m_EdgeRadius: 0
---- !u!1 &115909700
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 115909701}
-  m_Layer: 0
-  m_Name: Robot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &115909701
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115909700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 324926390}
-  m_Father: {fileID: 2124665939}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &117276312
 GameObject:
   m_ObjectHideFlags: 0
@@ -5175,7 +5150,7 @@ GameObject:
   - component: {fileID: 324926392}
   - component: {fileID: 324926391}
   m_Layer: 0
-  m_Name: "Normal Robo Dan\xE7ando_0"
+  m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5192,8 +5167,8 @@ Transform:
   m_LocalPosition: {x: -0.01, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 115909701}
-  m_RootOrder: 0
+  m_Father: {fileID: 2124665939}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &324926391
 Animator:
@@ -5768,10 +5743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robots:
-  - {fileID: 115909700}
-  - {fileID: 1217483984}
-  - {fileID: 979654842}
-  - {fileID: 1366793241}
+  - {fileID: 324926389}
+  - {fileID: 1901472917}
+  - {fileID: 1868387156}
+  - {fileID: 486975166}
   pinkTxt: {fileID: 1695900013}
   greenTxt: {fileID: 1741347599}
   blueTxt: {fileID: 1683429705}
@@ -7061,7 +7036,7 @@ GameObject:
   - component: {fileID: 486975169}
   - component: {fileID: 486975168}
   m_Layer: 0
-  m_Name: "Tricromacia Robo Dan\xE7ando_0"
+  m_Name: Trichromatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7075,11 +7050,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486975166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014207038, y: -0.012397875, z: 0}
-  m_LocalScale: {x: 0.45454547, y: 0.45454547, z: 0.47619048}
+  m_LocalPosition: {x: 0.031255484, y: -1.9772754, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1366793243}
-  m_RootOrder: 0
+  m_Father: {fileID: 2124665939}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &486975168
 Animator:
@@ -7134,8 +7109,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1809596807
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6f69ee83004ef3e40b850d37a5703a06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8520,7 +8495,8 @@ PrefabInstance:
       propertyPath: shield
       value: 
       objectReference: {fileID: 1505190231}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 549892629, guid: fbab56633a24ea740962d0729f3bde3b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fbab56633a24ea740962d0729f3bde3b, type: 3}
 --- !u!1 &558531271
 GameObject:
@@ -16350,37 +16326,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0766871, y: 0.0766871}
   m_EdgeRadius: 0
---- !u!1 &979654842
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 979654843}
-  m_Layer: 0
-  m_Name: Monochromatic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &979654843
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979654842}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.95, z: 0}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 2.1}
-  m_Children:
-  - {fileID: 1868387157}
-  m_Father: {fileID: 2124665939}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &982861918
 GameObject:
   m_ObjectHideFlags: 0
@@ -21653,37 +21598,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0766871, y: 0.0766871}
   m_EdgeRadius: 0
---- !u!1 &1217483984
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1217483985}
-  m_Layer: 0
-  m_Name: Dichromatic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1217483985
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217483984}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.95, z: 0}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 2.1}
-  m_Children:
-  - {fileID: 1901472918}
-  m_Father: {fileID: 2124665939}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1217960011
 GameObject:
   m_ObjectHideFlags: 0
@@ -24251,37 +24165,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0766871, y: 0.0766871}
   m_EdgeRadius: 0
---- !u!1 &1366793241
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1366793243}
-  m_Layer: 0
-  m_Name: Trichromatic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1366793243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366793241}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.95, z: 0}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 2.1}
-  m_Children:
-  - {fileID: 486975167}
-  m_Father: {fileID: 2124665939}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370169933
 GameObject:
   m_ObjectHideFlags: 0
@@ -30693,7 +30576,7 @@ GameObject:
   - component: {fileID: 1868387159}
   - component: {fileID: 1868387158}
   m_Layer: 0
-  m_Name: "Monocromia Robo Dan\xE7ando_0"
+  m_Name: Monochromatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30707,11 +30590,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868387156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0130962245, y: -0.015070655, z: 0}
-  m_LocalScale: {x: 0.45454547, y: 0.45454547, z: 0.47619048}
+  m_LocalPosition: {x: 0.028811695, y: -1.9831555, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 979654843}
-  m_RootOrder: 0
+  m_Father: {fileID: 2124665939}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1868387158
 Animator:
@@ -31982,7 +31865,7 @@ GameObject:
   - component: {fileID: 1901472920}
   - component: {fileID: 1901472919}
   m_Layer: 0
-  m_Name: "Dicromacia Robo Dan\xE7ando_0"
+  m_Name: Dichromatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31996,11 +31879,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901472917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0014620478, y: -0.024776135, z: 0}
-  m_LocalScale: {x: 0.45454547, y: 0.45454547, z: 0.47619048}
+  m_LocalPosition: {x: -0.003216505, y: -2.0045075, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1217483985}
-  m_RootOrder: 0
+  m_Father: {fileID: 2124665939}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1901472919
 Animator:
@@ -35728,7 +35611,7 @@ PrefabInstance:
       objectReference: {fileID: 1964329178}
     - target: {fileID: 1993853569489192, guid: 79167250dae14524982406dbbb0df546, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114600590618453478, guid: 79167250dae14524982406dbbb0df546,
         type: 3}
@@ -36523,10 +36406,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 532668355}
-  - {fileID: 1217483985}
-  - {fileID: 979654843}
-  - {fileID: 1366793243}
-  - {fileID: 115909701}
+  - {fileID: 324926390}
+  - {fileID: 1901472918}
+  - {fileID: 1868387157}
+  - {fileID: 486975167}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36548,7 +36431,6 @@ MonoBehaviour:
   pinkPercentUI: {fileID: 1695900013}
   bluePercentUI: {fileID: 1683429705}
   greenPercentUI: {fileID: 1741347599}
-  aussAndAuss: {fileID: 0}
 --- !u!1 &2127732244
 GameObject:
   m_ObjectHideFlags: 0
