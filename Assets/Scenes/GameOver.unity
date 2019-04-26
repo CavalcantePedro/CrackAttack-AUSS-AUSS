@@ -518,6 +518,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1405444819}
   - component: {fileID: 1405444818}
+  - component: {fileID: 1405444820}
+  - component: {fileID: 1405444821}
+  - component: {fileID: 1405444822}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -557,6 +560,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1405444820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405444817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ab4ba4d0092e641a046fa2d704ebbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1405444821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405444817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b398d648c57c1947be608dba764b82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ssHeartColors: []
+  corazon: {fileID: 0}
+  robot: {fileID: 0}
+  dich: {fileID: 0}
+  mono: {fileID: 0}
+  trich: {fileID: 0}
+  shield: {fileID: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
+  HUDGameplay: {fileID: 0}
+  cameraScript: {fileID: 0}
+  paddleTransform: {fileID: 0}
+  ballShot: {fileID: 0}
+  ballCode: {fileID: 0}
+  ls: {fileID: 0}
+  gm: {fileID: 0}
+  healthUI: {fileID: 0}
+  transitionToGameOver: {fileID: 0}
+  objectParticles: {fileID: 0}
+  collectableHeart: {fileID: 0}
+  robotScreen: {fileID: 0}
+  time: {fileID: 0}
+--- !u!114 &1405444822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405444817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b398d648c57c1947be608dba764b82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ssHeartColors: []
+  corazon: {fileID: 0}
+  robot: {fileID: 0}
+  dich: {fileID: 0}
+  mono: {fileID: 0}
+  trich: {fileID: 0}
+  shield: {fileID: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
+  HUDGameplay: {fileID: 0}
+  cameraScript: {fileID: 0}
+  paddleTransform: {fileID: 0}
+  ballShot: {fileID: 0}
+  ballCode: {fileID: 0}
+  ls: {fileID: 0}
+  gm: {fileID: 0}
+  healthUI: {fileID: 0}
+  transitionToGameOver: {fileID: 0}
+  objectParticles: {fileID: 0}
+  collectableHeart: {fileID: 0}
+  robotScreen: {fileID: 0}
+  time: {fileID: 0}
 --- !u!1 &1547973043
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,15 +811,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1547973044}
-        m_MethodName: ChangeSceneWithDelay
-        m_Mode: 3
+      - m_Target: {fileID: 1405444820}
+        m_MethodName: GameInit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Game
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

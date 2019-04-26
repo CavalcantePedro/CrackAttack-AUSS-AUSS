@@ -5913,6 +5913,7 @@ GameObject:
   - component: {fileID: 623546474}
   - component: {fileID: 623546475}
   - component: {fileID: 623546472}
+  - component: {fileID: 623546476}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -5980,6 +5981,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1942770551}
   anim2: {fileID: 1006275501}
+--- !u!114 &623546476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623546471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b398d648c57c1947be608dba764b82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ssHeartColors: []
+  corazon: {fileID: 0}
+  robot: {fileID: 0}
+  dich: {fileID: 0}
+  mono: {fileID: 0}
+  trich: {fileID: 0}
+  shield: {fileID: 0}
+  player: {fileID: 0}
+  playerScript: {fileID: 0}
+  HUDGameplay: {fileID: 0}
+  cameraScript: {fileID: 0}
+  paddleTransform: {fileID: 0}
+  ballShot: {fileID: 0}
+  ballCode: {fileID: 0}
+  ls: {fileID: 1310260755}
+  gm: {fileID: 0}
+  healthUI: {fileID: 0}
+  transitionToGameOver: {fileID: 0}
+  objectParticles: {fileID: 0}
+  collectableHeart: {fileID: 0}
+  robotScreen: {fileID: 0}
+  time: {fileID: 0}
 --- !u!1 &758001531
 GameObject:
   m_ObjectHideFlags: 0
@@ -7102,71 +7137,6 @@ MonoBehaviour:
   delayTime: 0
   glitchWithoutClick: 0
   glitchAll: 0
---- !u!1 &1254339866
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1254339868}
-  - component: {fileID: 1254339867}
-  m_Layer: 0
-  m_Name: Singleton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1254339867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254339866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b398d648c57c1947be608dba764b82b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ssHeartColors: []
-  corazon: {fileID: 0}
-  robot: {fileID: 0}
-  dich: {fileID: 0}
-  mono: {fileID: 0}
-  trich: {fileID: 0}
-  shield: {fileID: 0}
-  player: {fileID: 0}
-  playerScript: {fileID: 0}
-  HUDGameplay: {fileID: 0}
-  cameraScript: {fileID: 0}
-  paddleTransform: {fileID: 0}
-  ballShot: {fileID: 0}
-  ballCode: {fileID: 0}
-  ls: {fileID: 1310260755}
-  gm: {fileID: 0}
-  healthUI: {fileID: 0}
-  transitionToGameOver: {fileID: 0}
-  objectParticles: {fileID: 0}
-  collectableHeart: {fileID: 0}
-  robotScreen: {fileID: 0}
-  time: {fileID: 0}
---- !u!4 &1254339868
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254339866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7766307, y: -0.8452634, z: 646.8908}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1260941390
 GameObject:
   m_ObjectHideFlags: 0

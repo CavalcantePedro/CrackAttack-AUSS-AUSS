@@ -22,7 +22,11 @@ public class PlayerLosedTransition : MonoBehaviour {
     { 
         oneParticle.Pause();
         zeroParticle.Pause();
-        Singleton.GetInstance.robotScreen.StopChanging();
+        Singleton.GetInstance.robot.GetComponent<Animator>().enabled = false;
+        Singleton.GetInstance.dich.GetComponent<Animator>().enabled = false;
+        Singleton.GetInstance.mono.GetComponent<Animator>().enabled = false;
+        Singleton.GetInstance.trich.GetComponent<Animator>().enabled = false; 
+        Singleton.GetInstance.corazon.GetComponent<Animator>().enabled = false;
         ObjectPooler.instance.StopAllBalls();
         GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = false;
         AudioManager.instance.StopAll();
