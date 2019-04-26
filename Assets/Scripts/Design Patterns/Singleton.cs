@@ -6,7 +6,12 @@ using UnityEngine;
 public class Singleton : MonoBehaviour {
 
 	public Color[] ssHeartColors;
-
+    public GameObject corazon;
+	public GameObject robot;
+	public GameObject dich;
+	public GameObject mono;
+	public GameObject trich;
+	public GameObject shield;
     public GameObject player;
 
 	public PaddleController playerScript;

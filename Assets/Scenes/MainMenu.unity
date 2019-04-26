@@ -7132,6 +7132,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssHeartColors: []
+  corazon: {fileID: 0}
+  robot: {fileID: 0}
+  dich: {fileID: 0}
+  mono: {fileID: 0}
+  trich: {fileID: 0}
+  shield: {fileID: 0}
   player: {fileID: 0}
   playerScript: {fileID: 0}
   HUDGameplay: {fileID: 0}
@@ -7679,6 +7685,7 @@ MonoBehaviour:
   numberAnim: {fileID: 55501165}
   plusOneBtn: {fileID: 131927218}
   minusOneBtn: {fileID: 1266236409}
+  levelNumber: 0
   recordText: {fileID: 394477451}
   difficultySwitch: {fileID: 810715252}
   difficulty: 

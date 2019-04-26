@@ -26,6 +26,8 @@ public class GameColorBlind : MonoBehaviour
                 robots[i].SetActive(false);
             }   
         }
+        
+    
 
         ChangeColor();
     }
