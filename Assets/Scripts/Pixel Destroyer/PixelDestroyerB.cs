@@ -112,7 +112,9 @@ public class PixelDestroyerB : MonoBehaviour {
 				Instantiate(Singleton.GetInstance.collectableHeart ,transform.position,Quaternion.identity);
 			}
            
-			AudioManager.instance.Play("Crack");
+		  
+			Sound();
+
 			ParticleSystem[] ex = Explode.Self.GetExplosion();
 			ex[0].transform.position = transform.position;
 			ex[1].transform.position = transform.position;
@@ -121,6 +123,22 @@ public class PixelDestroyerB : MonoBehaviour {
 			ex[1].Play();
 			gameObject.SetActive(false);
 		}  
+	}
+
+	void Sound()
+	{
+		if(Singleton.GetInstance.gm.switchSound)
+			{		
+				AudioManager.instance.Play("Crack");
+				Singleton.GetInstance.gm.switchSound	= false;	
+			}
+
+			else
+			{
+				AudioManager.instance.Play("Attack");
+				Singleton.GetInstance.gm.switchSound = true;
+				print("attack");
+			}
 	}
 
 }

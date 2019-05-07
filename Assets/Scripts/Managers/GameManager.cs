@@ -37,12 +37,16 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]public int pinkPixelsDestroyed;   
     [HideInInspector]public int bluePixelsDestroyed;
     [HideInInspector]public int greenPixelsDestroyed;
+
+    //sound feedback
+    [HideInInspector] public bool switchSound;
     
     void Start () {
         totalPixelsDestroyed = 0;
         pinkPixelsDestroyed = 0;   
         bluePixelsDestroyed = 0;
         greenPixelsDestroyed = 0;
+        switchSound = true;
         //se tiver no pc vai ser joystick
         if(!Application.isMobilePlatform)
         {
