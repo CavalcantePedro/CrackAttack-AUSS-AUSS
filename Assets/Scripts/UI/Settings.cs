@@ -35,6 +35,10 @@ public class Settings : MonoBehaviour {
 	}
 
 	public void UpdateFlags(){
+		/*
+		
+		//Put this animation On later...!!!!!!
+
 		switch(PlayerPrefs.GetInt("Language"))
         {
             case 0:
@@ -47,6 +51,7 @@ public class Settings : MonoBehaviour {
 				enFlag.SetTrigger("stopUSAFlag");
             break;
         }
+		*/
 	}
 
 	public void ChoosingArrows()
