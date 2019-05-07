@@ -1598,6 +1598,7 @@ MonoBehaviour:
   paddleTransform: {fileID: 1757506071}
   ballShot: {fileID: 1964329178}
   ballCode: {fileID: 0}
+  ls: {fileID: 0}
   gm: {fileID: 1113358680}
   healthUI: {fileID: 267466567}
   transitionToGameOver: {fileID: 1113358682}
@@ -32687,6 +32688,16 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[3].volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114440803957798172, guid: b403fdb53819d6b46a5ca6de57e44686,
+        type: 3}
+      propertyPath: sounds.Array.data[15].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114440803957798172, guid: b403fdb53819d6b46a5ca6de57e44686,
+        type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b403fdb53819d6b46a5ca6de57e44686, type: 3}

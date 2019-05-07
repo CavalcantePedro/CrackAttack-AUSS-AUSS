@@ -179,7 +179,7 @@ public class BallCode : MonoBehaviour {
 	}
 
 	void OnDestroy() {
-		print("BallCode");	
+		
 	}
 
 	void IgnoreCollision(){

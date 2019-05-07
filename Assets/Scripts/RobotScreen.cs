@@ -42,7 +42,7 @@ public class RobotScreen : MonoBehaviour {
 	{   
 		for(;;)
 		{	
-			print("totalito telito" + Singleton.GetInstance.gm.totalPixels);
+
 			//Rosa
 			percentPink = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.pinkPixels - Singleton.GetInstance.gm.pinkPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
 			if(percentPink < 0)

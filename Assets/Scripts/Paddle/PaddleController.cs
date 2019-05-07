@@ -29,7 +29,6 @@ public class PaddleController : MonoBehaviour {
 
     void Update()
     {      
-        print(PlayerPrefs.GetInt("Language"));
         transform.position = new Vector3(Mathf.Clamp(transform.position.x,-2.7f ,2.7f) , transform.position.y);
         rb.velocity = new Vector2 (Mathf.Clamp(rb.velocity.x ,-speed * Time.deltaTime, speed * Time.deltaTime) , rb.velocity.y);
     }
@@ -87,7 +86,7 @@ public class PaddleController : MonoBehaviour {
           if (ballCount < 8 && (ballCount + activeBall) < 8)
            {
                ballCount++;
-               print("cheguei aqui");
+              
 
                 if(PlayerPrefs.GetInt("Language") == 1)
 			{
@@ -120,6 +119,27 @@ public class PaddleController : MonoBehaviour {
           for(int i=0;i<heartGainParticles.Length;i++)
         {
             heartGainParticles[i].Play();
+        }
+
+        
+        if(PlayerPrefs.GetInt("Language") == 0)
+        {
+            AudioManager.instance.Play("EN_GainAHeart1");
+        }
+
+        else
+        {
+            int randomAudio = Random.Range(1,2);
+            switch(randomAudio)
+            {
+            case 1:  
+            AudioManager.instance.Play("BR_GainAHeart1");
+            break;
+
+            case 2:
+            AudioManager.instance.Play("BR_GainAHeart2");
+            break;
+            }
         }
         Singleton.GetInstance.healthUI.LifeCheck(health);
     }

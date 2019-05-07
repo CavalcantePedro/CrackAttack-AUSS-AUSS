@@ -64,7 +64,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Shot
     audio: {fileID: 8300000, guid: 5bc140bad780a0b4b9fa323bb6a472e6, type: 3}
-    volume: 1
+    volume: 0.5
     PlayOnAwake: 0
     loop: 0
     source: {fileID: 0}
@@ -81,8 +81,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Crack
-    audio: {fileID: 8300000, guid: 87592b49a7a7df6428fe13c919bd957d, type: 3}
-    volume: 0.3
+    audio: {fileID: 8300000, guid: 66948e5e3f2e9724686dc930b4629b7a, type: 3}
+    volume: 0.25
     PlayOnAwake: 0
     loop: 0
     source: {fileID: 0}
@@ -95,6 +95,66 @@ MonoBehaviour:
   - name: BR_PlusBall1
     audio: {fileID: 8300000, guid: 4960a5e230900624e88801356506c9e8, type: 3}
     volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BR_MissedBall1
+    audio: {fileID: 8300000, guid: d3f5cd415526943498c7b402ac11828b, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BR_MissedBall2
+    audio: {fileID: 8300000, guid: fe80d13aaf7345944a3b3b7300df978f, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BR_MissedBall3
+    audio: {fileID: 8300000, guid: 82552cdbe74822e44b14f608d07fec62, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EN_MissedBall1
+    audio: {fileID: 8300000, guid: cfe96c29d47b4074086bd6ed2d989526, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EN_MissedBall2
+    audio: {fileID: 8300000, guid: a05f551a6dd19fa48b56a9d26ef20018, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EN_MissedBall3
+    audio: {fileID: 8300000, guid: b09b011dfbd2cb04995384b3d74b0d2e, type: 3}
+    volume: 1
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Attack
+    audio: {fileID: 8300000, guid: 85c3f8fd31bea824fa0a2ea3236564a1, type: 3}
+    volume: 0.25
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EN_GainAHeart1
+    audio: {fileID: 8300000, guid: 74c3757c76afa6f4d82690317648ca36, type: 3}
+    volume: 0.25
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BR_GainAHeart1
+    audio: {fileID: 8300000, guid: 2c64430fe5b2e0e49b56980d6de51610, type: 3}
+    volume: 0.25
+    PlayOnAwake: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BR_GainAHeart2
+    audio: {fileID: 8300000, guid: 8d33855e5df0be74085630cff4502b65, type: 3}
+    volume: 0.25
     PlayOnAwake: 0
     loop: 0
     source: {fileID: 0}
