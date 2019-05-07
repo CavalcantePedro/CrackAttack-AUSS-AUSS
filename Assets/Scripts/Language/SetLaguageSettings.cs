@@ -10,6 +10,9 @@ public class SetLaguageSettings : MonoBehaviour
     [SerializeField] private Text language;
     [SerializeField] private Text colorBlind;
 
+    [Header("References")]
+    [SerializeField] private Settings flagAnim;
+
     void Start() {
         LanguageUpdate();    
     }
@@ -43,6 +46,7 @@ public class SetLaguageSettings : MonoBehaviour
     }
 
     public void LanguageBtn(int index){
+        flagAnim.UpdateFlags();
         PlayerPrefs.SetInt("Language", index);
         LanguageUpdate();
         PlayerPrefs.Save();

@@ -8,6 +8,10 @@ public class Settings : MonoBehaviour {
 	[SerializeField] private Animator swipeAnim;
 	[SerializeField] private Animator joyAnim;
 
+	[Header("Flags Animation")] 
+	[SerializeField] private Animator ptFlag;
+	[SerializeField] private Animator enFlag;
+
 	void OnEnable()
 	{
 		if(PlayerPrefs.GetString("PlayerMovement") == "arrows"){
@@ -26,6 +30,28 @@ public class Settings : MonoBehaviour {
 			swipeAnim.SetBool("glitching" , false);
 			joyAnim.SetBool("glitching", true);
 		}
+
+		UpdateFlags();
+	}
+
+	public void UpdateFlags(){
+		/*
+		
+		//Put this animation On later...!!!!!!
+
+		switch(PlayerPrefs.GetInt("Language"))
+        {
+            case 0:
+                ptFlag.SetTrigger("stopBrazilianFlag");
+				enFlag.SetTrigger("glitchUSAFlag");
+            break;
+
+            case 1:
+                ptFlag.SetTrigger("glitchBrazilianFlag");
+				enFlag.SetTrigger("stopUSAFlag");
+            break;
+        }
+		*/
 	}
 
 	public void ChoosingArrows()
