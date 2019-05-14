@@ -84,6 +84,8 @@ Material:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     - _ScanPoint: 510
 =======
     - _ScanPoint: -100
@@ -106,6 +108,12 @@ Material:
 =======
     - _ScanPoint: 760
 >>>>>>> de7f3c4... Flags Animation
+=======
+    - _ScanPoint: 1970
+>>>>>>> 43612d7... FirstSettingsMenu
+=======
+    - _ScanPoint: 1080
+>>>>>>> 60c1cc3... Transition OK
     - _ScanThikness: 15
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

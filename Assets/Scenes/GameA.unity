@@ -9957,6 +9957,11 @@ PrefabInstance:
       propertyPath: plusThreeBall
       value: 
       objectReference: {fileID: 1831121847}
+    - target: {fileID: 114894636973140964, guid: 1da07fb83a813bf4383be63c918bde47,
+        type: 3}
+      propertyPath: speed
+      value: 325
+      objectReference: {fileID: 0}
     - target: {fileID: 4010081557759306, guid: 1da07fb83a813bf4383be63c918bde47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -25935,7 +25940,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shrinkingSpeed: 0.15
   expandingDelay: 0.5
+<<<<<<< HEAD
   growMaxValue: 2
+=======
+>>>>>>> cae5653... BugFixes and Values Adjustment
   equalGrow: 1
 --- !u!1 &1514815873
 GameObject:

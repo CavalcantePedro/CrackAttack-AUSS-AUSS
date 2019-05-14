@@ -46,6 +46,9 @@ public class PaddleController : MonoBehaviour {
         {
             
             coll.gameObject.SetActive(false);
+
+            GainAHeartSound();
+            
             if(health < 3)
             {
                 health++;
@@ -55,6 +58,29 @@ public class PaddleController : MonoBehaviour {
     }
     #endregion
 
+    void  GainAHeartSound()
+    {
+        if(PlayerPrefs.GetInt("Language") == 0)
+        {
+            AudioManager.instance.Play("EN_GainAHeart1");
+            print("toquei o somzin de ganha coraçao");
+        }
+
+        else
+        {
+            int randomAudio = Random.Range(1,2);
+            switch(randomAudio)
+            {
+            case 1:  
+            AudioManager.instance.Play("BR_GainAHeart1");
+            break;
+
+            case 2:
+            AudioManager.instance.Play("BR_GainAHeart2");
+            break;
+            }
+        }
+    }
     #region BallController
     void AddingBalls()
     {
@@ -119,27 +145,6 @@ public class PaddleController : MonoBehaviour {
           for(int i=0;i<heartGainParticles.Length;i++)
         {
             heartGainParticles[i].Play();
-        }
-
-        
-        if(PlayerPrefs.GetInt("Language") == 0)
-        {
-            AudioManager.instance.Play("EN_GainAHeart1");
-        }
-
-        else
-        {
-            int randomAudio = Random.Range(1,2);
-            switch(randomAudio)
-            {
-            case 1:  
-            AudioManager.instance.Play("BR_GainAHeart1");
-            break;
-
-            case 2:
-            AudioManager.instance.Play("BR_GainAHeart2");
-            break;
-            }
         }
         Singleton.GetInstance.healthUI.LifeCheck(health);
     }

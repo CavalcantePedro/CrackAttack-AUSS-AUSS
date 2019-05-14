@@ -166,13 +166,13 @@ public class BallCode : MonoBehaviour {
 	{
 		if(rb.velocity.y > 0)
 		{
-			xRandomForce = Random.Range(50,251);
+			xRandomForce = Random.Range(50,276);
 			yRandomForce = ballForce - xRandomForce;
 		}
 
 		else if(rb.velocity.y < 0)
 		{
-			xRandomForce = Random.Range(-250,-51 );
+			xRandomForce = Random.Range(-275,-51 );
 			yRandomForce = (ballForce - xRandomForce) *-1;
 		}
 

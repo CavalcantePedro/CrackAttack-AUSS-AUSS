@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
         //se tiver no pc vai ser joystick
         if(!Application.isMobilePlatform)
         {
-       PlayerPrefs.SetString("PlayerMovement", "joyStick");
+      // PlayerPrefs.SetString("PlayerMovement", "joyStick");
         }
         print("ac" + totalPixels);
         GeneratingColorRate();

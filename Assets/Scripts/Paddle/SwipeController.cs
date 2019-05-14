@@ -6,6 +6,7 @@ public class SwipeController : MoveController {
 
     public bool isMovingWithSwipe { get; private set; }
     [SerializeField]private Collider2D coll;
+    private Collider2D playerColl;
 
     public GameManager gm;
 
@@ -13,7 +14,7 @@ public class SwipeController : MoveController {
     {
         ballShot.isJoystick = false;
         rb = paddle.rb;
-        //coll = paddle.coll;
+        playerColl = paddle.coll;
     }
 
     private void Update()
@@ -61,8 +62,9 @@ public class SwipeController : MoveController {
     public void OnMouseDown()
     {
         Collider2D collOnPoint = Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        if (collOnPoint.Equals(coll))
+        if (collOnPoint.Equals(coll) || collOnPoint.Equals(playerColl))
         {
+           
             isMovingWithSwipe = true;
         }
     }
