@@ -27,40 +27,42 @@ public class LevelSelectionBox : MonoBehaviour
     [HideInInspector] public string difficulty;
     
 
-    void Start()
-    {
-        
+    void Start(){
+
         levelNumber = 1;
         GameInit();
         ManagingLevels();
         CheckingRecord();
+    
+        StartCoroutine(UpdateBox());
     }
 
-    public void SelectNextLevel()
-    {
+    void UpdateStatus(){
+        numberUI.sprite = numberSprites[levelNumber];
+        numberAnim.SetInteger("TransitionTo", levelNumber);
+    }
+
+    public void SelectNextLevel(){
         levelNumber++;
         ManagingLevels();
         CheckingRecord();
         GameInit();
     }
 
-    public void SelectPreviousLevel()
-    {
+    public void SelectPreviousLevel(){
         levelNumber--;
         ManagingLevels();
         CheckingRecord();
         GameInit();
     }
     
-    public void DifficultyChange()
-    {
-        if(difficultySwitch.isOn)
-        {
+    public void DifficultyChange(){
+        
+        if(difficultySwitch.isOn){
             difficulty = "hard";
         }
 
-        else
-        {
+        else{
             difficulty = "easy";
         }
 
@@ -68,88 +70,90 @@ public class LevelSelectionBox : MonoBehaviour
 
     void ManagingLevels()
     {
-        numberUI.sprite = numberSprites[levelNumber];
-        numberAnim.SetInteger("TransitionTo",levelNumber);
         switch(levelNumber)
         {
-        case 1 :
-        minusOneBtn.SetActive(false);
-        break;
+            case 1 :
+                minusOneBtn.SetActive(false);
+            break;
 
-        case 4 :
-        plusOneBtn.SetActive(false);
-        break;
+            case 4 :
+                plusOneBtn.SetActive(false);
+            break;
 
-        default:
-        if(!minusOneBtn.activeSelf || !plusOneBtn.activeSelf)
-        {
-        minusOneBtn.SetActive(true);
-        plusOneBtn.SetActive(true);
-        }
-        break;
+            default:
+                if(!minusOneBtn.activeSelf || !plusOneBtn.activeSelf){
+                    minusOneBtn.SetActive(true);
+                    plusOneBtn.SetActive(true);
+                }
+            break;
         }
     }
 
     void CheckingRecord()
     {
 
-      switch(levelNumber)
-      {
-          case 1:
-            recordPlayerPref = "Record1";
-          break;
-          
-          case 2:
-            recordPlayerPref = "Record2";
-          break;
+        switch(levelNumber) {
+            case 1:
+                recordPlayerPref = "Record1";
+            break;
+            
+            case 2:
+                recordPlayerPref = "Record2";
+            break;
 
-          case 3:
-           recordPlayerPref = "Record3";
-          break;
+            case 3:
+            recordPlayerPref = "Record3";
+            break;
 
-          case 4:
-           recordPlayerPref = "Record4";
-          break;
-      }
+            case 4:
+            recordPlayerPref = "Record4";
+            break;
+        }
+        
         ShowingRecord();
     }
 
-    void ShowingRecord()
-    {
-        if(PlayerPrefs.HasKey(recordPlayerPref))
-        {
+    void ShowingRecord() {
+        if(PlayerPrefs.HasKey(recordPlayerPref)) {
             recordSt = PlayerPrefs.GetInt(recordPlayerPref).ToString();
             recordText.text ="Record:" + recordSt;
         }
-            else
-        {
+        else {
             recordText.text = "Record:0";
         }
     }
 
-    void GameInit()
-    {
-        switch(levelNumber)
-            {
-                case 1:
+    void GameInit(){
+
+        switch(levelNumber){
+            case 1:
                 print("Entrou");
                 PlayerPrefs.SetString("Shield","Off");
                 PlayerPrefs.SetString("Dancing","Off");
-                break;
-                case 2:
+            break;
+            
+            case 2:
                 print("Entrou2");
                 PlayerPrefs.SetString("Shield","Off");
                 PlayerPrefs.SetString("Dancing","On");
-                break;
-                case 3:
+            break;
+
+            case 3:
                 PlayerPrefs.SetString("Shield","On");
                 PlayerPrefs.SetString("Dancing","Off");
-                break;
-                case 4:
+            break;
+
+            case 4:
                 PlayerPrefs.SetString("Shield","On");
                 PlayerPrefs.SetString("Dancing","On");
-                break;
-            }
+            break;
+        }
     }
-    
+
+    IEnumerator UpdateBox() {
+        for(;;){
+            UpdateStatus();
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
 }
