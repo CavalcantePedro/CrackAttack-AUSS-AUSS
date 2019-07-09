@@ -86,6 +86,8 @@ Material:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     - _ScanPoint: 510
 =======
     - _ScanPoint: -100
@@ -114,6 +116,12 @@ Material:
 =======
     - _ScanPoint: 1080
 >>>>>>> 60c1cc3... Transition OK
+=======
+    - _ScanPoint: 970
+>>>>>>> fe3b555... Level box bugs 0.1
+=======
+    - _ScanPoint: 1080
+>>>>>>> f0526e4... colors glitch
     - _ScanThikness: 15
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

@@ -25,15 +25,13 @@ public class CodeUI : MonoBehaviour {
 		sp = GetComponent<SpriteRenderer>();
 	}
 	
-	public void Fall()
-	{
+	public void Fall(){
 		rb.gravityScale = 0.5f;
 		btnCredits.interactable = false;
 		btnSettings.interactable = false;
 	}
 
-	IEnumerator ChangingScene()
-	{
+	IEnumerator ChangingScene(){
 		yield return new WaitForSeconds(1.5f);
 		canvas.SetActive(false);
 		sp.color = invisible;
@@ -47,8 +45,7 @@ public class CodeUI : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter2D(Collision2D other) 
-	{
+	void OnCollisionEnter2D(Collision2D other) {
 		zeroParticle.Pause();
 		oneParticle.Pause();
 		AudioManager.instance.Play("Caindo");
@@ -58,14 +55,12 @@ public class CodeUI : MonoBehaviour {
 	public void GameInit()
 	{
 		
-		if (Singleton.GetInstance.ls.difficulty == "hard")
-		{
-		  PlayerPrefs.SetString("Dificuldade" , "Hard");
-          SceneManager.LoadScene(sceneBuildIndex: 2);
+		if (Singleton.GetInstance.ls.difficulty == "hard"){
+		  	PlayerPrefs.SetString("Dificuldade" , "Hard");
+          	SceneManager.LoadScene(sceneBuildIndex: 2);
 		}
-		else 
-		{
-          SceneManager.LoadScene(sceneBuildIndex: 6);
+		else {
+          	SceneManager.LoadScene(sceneBuildIndex: 6);
 		}
 
 		
