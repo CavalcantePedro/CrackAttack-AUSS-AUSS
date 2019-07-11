@@ -46,6 +46,9 @@ public class PaddleController : MonoBehaviour {
         {
             
             coll.gameObject.SetActive(false);
+
+            GainAHeartSound();
+            
             if(health < 3)
             {
                 health++;
@@ -55,6 +58,29 @@ public class PaddleController : MonoBehaviour {
     }
     #endregion
 
+    void  GainAHeartSound()
+    {
+        if(PlayerPrefs.GetInt("Language") == 0)
+        {
+            AudioManager.instance.Play("EN_GainAHeart1");
+            print("toquei o somzin de ganha coraçao");
+        }
+
+        else
+        {
+            int randomAudio = Random.Range(1,2);
+            switch(randomAudio)
+            {
+            case 1:  
+            AudioManager.instance.Play("BR_GainAHeart1");
+            break;
+
+            case 2:
+            AudioManager.instance.Play("BR_GainAHeart2");
+            break;
+            }
+        }
+    }
     #region BallController
     void AddingBalls()
     {
@@ -64,7 +90,7 @@ public class PaddleController : MonoBehaviour {
           case 1:
           if (ballCount < 8 && (ballCount + activeBall) < 8)
            {       
-               AudioManager.instance.Play("PlusBall");
+              // AudioManager.instance.Play("PlusBall");
                plusOneBall.SetTrigger("appear");
                ballCountScript.UpdateUI(ballCount);
                
@@ -75,7 +101,7 @@ public class PaddleController : MonoBehaviour {
           case 2:
           if (ballCount < 8 && (ballCount + activeBall) < 8)
             {
-                AudioManager.instance.Play("PlusBall");
+              //  AudioManager.instance.Play("PlusBall");
                 plusTwoBall.SetTrigger("appear");
                 ballCountScript.UpdateUI(ballCount);
             }
@@ -86,7 +112,14 @@ public class PaddleController : MonoBehaviour {
           if (ballCount < 8 && (ballCount + activeBall) < 8)
            {
                ballCount++;
-               AudioManager.instance.Play("PlusBall");
+              
+
+                if(PlayerPrefs.GetInt("Language") == 1)
+			{
+				//Se  estiver em portugues
+                print("Rodei");
+				 AudioManager.instance.Play("BR_PlusBall1");
+			}     
                plusThreeBall.SetTrigger("appear");
                 ballCountScript.UpdateUI(ballCount);
            }

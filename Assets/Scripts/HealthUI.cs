@@ -22,7 +22,7 @@ public class HealthUI : MonoBehaviour {
 
 	IEnumerator DestroingHeart(GameObject corazon)
 	{	
-		print("00");
+	
 		corazon.GetComponent<SetGlitch>().GlitchNow();
 		yield return new WaitForSeconds(0.45f);
 		corazon.SetActive(false);
@@ -56,7 +56,7 @@ public class HealthUI : MonoBehaviour {
 			//se estiver ativo
 				if(heart3)
 				{
-					print("c");
+				
 					heart3 = false;
 					StartCoroutine(DestroingHeart(UIHeart[3]));
 				}

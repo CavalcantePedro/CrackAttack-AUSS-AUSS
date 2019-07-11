@@ -68,7 +68,7 @@ public class BallShot : MonoBehaviour {
 		SpriteRenderer sp = obj.GetComponentInChildren<SpriteRenderer>();
 		sp.color = paddleSprite.color;
 		obj.tag = SetTag(sp.color);
-		print(obj);
+		
 		if(obj != null){
 			obj.transform.position = transform.position;
 			obj.SetActive(true);

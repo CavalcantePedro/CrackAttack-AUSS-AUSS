@@ -19,12 +19,9 @@ public class RobotScreen : MonoBehaviour {
 	public Text bluePercentUI;
 	public Text greenPercentUI;
 
-	//public GameObject aussAndAuss;
-
-
     private void Start() 
 	{
-
+	totalPercent.SetActive(true);
 	StartCoroutine(PercentPixels());
 	//StartCoroutine(ChangingScreens());
 
@@ -33,7 +30,7 @@ public class RobotScreen : MonoBehaviour {
 	public void StopChanging()
 	{
 		colorPercent.SetActive(false);
-		totalPercent.SetActive(false);
+		totalPercent.SetActive(false);	
 		StopAllCoroutines();
 	}
 
@@ -41,7 +38,7 @@ public class RobotScreen : MonoBehaviour {
 	{   
 		for(;;)
 		{	
-			print("totalito telito" + Singleton.GetInstance.gm.totalPixels);
+
 			//Rosa
 			percentPink = Mathf.CeilToInt(100 * (Singleton.GetInstance.gm.pinkPixels - Singleton.GetInstance.gm.pinkPixelsDestroyed) / Singleton.GetInstance.gm.totalPixels);
 			if(percentPink < 0)
@@ -85,19 +82,18 @@ public class RobotScreen : MonoBehaviour {
 
 
 
-	//IEnumerator ChangingScreens()
-	//{
-	//	for(;;)
-	//	{
+	IEnumerator ChangingScreens()
+	{
+		for(;;)
+		{
 			
-	//		totalPercent.SetActive(true);
-	//		yield return new WaitForSeconds(Random.Range(1f,4f));
-	//		totalPercent.SetActive(false);
-	//		colorPercent.SetActive(true);
-	//		yield return new WaitForSeconds(Random.Range(1f,4f));
-	//		colorPercent.SetActive(false);
-	//		aussAndAuss.SetActive(true);		
-	//		yield return new WaitForSeconds(Random.Range(1f,4f));				
-	//	}
-	//}
+			yield return new WaitForSeconds(Random.Range(1f,4f));
+			totalPercent.SetActive(false);
+			colorPercent.SetActive(true);
+			yield return new WaitForSeconds(Random.Range(1f,4f));
+			colorPercent.SetActive(false);	
+			totalPercent.SetActive(true);			
+			yield return new WaitForSeconds(Random.Range(1f,4f));				
+		}
+	}
 }

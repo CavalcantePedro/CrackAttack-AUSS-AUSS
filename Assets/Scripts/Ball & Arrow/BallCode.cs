@@ -98,7 +98,47 @@ public class BallCode : MonoBehaviour {
 	{
 		//Get instance;
 			Singleton instance = Singleton.GetInstance;
-            AudioManager.instance.Play("MissedBall");
+			AudioManager.instance.Play("MissedBall");
+			 if(PlayerPrefs.GetInt("Language") == 1)
+			{
+				//Se  estiver em portugues
+				int randomPlay = Random.Range(1,3);
+				switch(randomPlay)
+					{
+				 		case 1:
+					 	AudioManager.instance.Play("BR_MissedBall1");
+						break;
+
+						case 2:
+					 	AudioManager.instance.Play("BR_MissedBall2");
+						break;
+
+						case 3:
+					 	AudioManager.instance.Play("BR_MissedBall3");
+						break;
+					}
+			}     
+			else
+			{
+				//Se  estiver em ingls
+				int randomPlay = Random.Range(1,3);
+				switch(randomPlay)
+					{
+				 		case 1:
+					 	AudioManager.instance.Play("EN_MissedBall1");
+						break;
+
+						case 2:
+					 	AudioManager.instance.Play("EN_MissedBall2");
+						break;
+
+						case 3:
+					 	AudioManager.instance.Play("EN_MissedBall3");
+						break;
+					}
+
+			}
+            
 			instance.cameraScript.CameraShake();
 			instance.playerScript.health -= 1;
 			instance.healthUI.LifeCheck(Singleton.GetInstance.playerScript.health);
@@ -126,20 +166,20 @@ public class BallCode : MonoBehaviour {
 	{
 		if(rb.velocity.y > 0)
 		{
-			xRandomForce = Random.Range(50,251);
+			xRandomForce = Random.Range(50,276);
 			yRandomForce = ballForce - xRandomForce;
 		}
 
 		else if(rb.velocity.y < 0)
 		{
-			xRandomForce = Random.Range(-250,-51 );
+			xRandomForce = Random.Range(-275,-51 );
 			yRandomForce = (ballForce - xRandomForce) *-1;
 		}
 
 	}
 
 	void OnDestroy() {
-		print("BallCode");	
+		
 	}
 
 	void IgnoreCollision(){

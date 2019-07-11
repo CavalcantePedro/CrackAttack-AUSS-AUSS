@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class PixelDestroyer : MonoBehaviour {
+public class PixelDestroyerA : MonoBehaviour {
 	
 	private ObjectPoolerParticles objParticles;
 	private SpriteRenderer sp;
@@ -20,7 +20,7 @@ public class PixelDestroyer : MonoBehaviour {
 	 }
 //(Collider2D coll)
 //(Collision2D coll)
-	 private void CountingPixels (Collision2D coll)
+	 private void CountingPixels (Collider2D coll)
 	 {
 		 Singleton.GetInstance.gm.totalPixelsDestroyed++;
 		 Singleton.GetInstance.gm.heartGainPixels++;
@@ -86,7 +86,7 @@ public class PixelDestroyer : MonoBehaviour {
 
      //OnTriggerEnter2D(Collider2D coll)
 	 //OnCollisionEnter2D(Collision2D coll)
-	private void OnCollisionEnter2D(Collision2D coll)
+	private void OnTriggerEnter2D(Collider2D coll)
 	{
 		
 		if(coll.gameObject.tag == this.gameObject.tag)
@@ -111,8 +111,9 @@ public class PixelDestroyer : MonoBehaviour {
 				Singleton.GetInstance.gm.heartGainPixels = 0; 
 				Instantiate(Singleton.GetInstance.collectableHeart ,transform.position,Quaternion.identity);
 			}
-           
-			AudioManager.instance.Play("Crack");
+			print("vo rodaa funçao");
+			Sound();
+
 			ParticleSystem[] ex = Explode.Self.GetExplosion();
 			ex[0].transform.position = transform.position;
 			ex[1].transform.position = transform.position;
@@ -122,5 +123,22 @@ public class PixelDestroyer : MonoBehaviour {
 			gameObject.SetActive(false);
 		}  
 	}
+
+		void Sound()
+			{
+				if(Singleton.GetInstance.gm.switchSound)
+					{		
+						AudioManager.instance.Play("Crack");
+						Singleton.GetInstance.gm.switchSound = false;
+						print("tocando o  crack");	
+					}
+
+					else
+					{
+						AudioManager.instance.Play("Attack");
+						Singleton.GetInstance.gm.switchSound = true;
+						print("attack");
+					}
+			}
 
 }

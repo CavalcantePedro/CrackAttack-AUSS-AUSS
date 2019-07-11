@@ -32,12 +32,12 @@ public class Shield : MonoBehaviour
 
     void ConstantShrinking()
     {
-        if(transform.localScale.x > 0.5f)
+        if(transform.localScale.x > 0f)
         {
             transform.localScale = new Vector2(transform.localScale.x - shrinkingSpeed, transform.localScale.y);
         }
 
-        if(transform.localScale.y > 0.5f)
+        if(transform.localScale.y > 0f)
         {
             transform.localScale = new Vector2(transform.localScale.x , transform.localScale.y - shrinkingSpeed);
         }

@@ -18,6 +18,19 @@ public class SceneScript : MonoBehaviour {
             delay = 30f;
             Invoke("CreditsToMenu", delay);
         }
+
+        if(SceneManager.GetActiveScene().name == "FirstTimeSettings")
+        {
+            if(!PlayerPrefs.HasKey("FirstTimeSettings"))
+            {
+                PlayerPrefs.SetInt("FirstTimeSettings", 1);
+            }
+            
+            else
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
     }
 
    void CreditsToMenu(){
