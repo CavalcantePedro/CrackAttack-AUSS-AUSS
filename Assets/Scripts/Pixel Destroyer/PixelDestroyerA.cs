@@ -13,6 +13,8 @@ public class PixelDestroyerA : MonoBehaviour {
 	
 	void Start(){
 
+		print("Number info (2):" + PlayerPrefs.GetInt("Level"));
+
 		sp = GetComponent<SpriteRenderer>();
 		StartCoroutine(ChoosingColors());
 		objParticles = Singleton.GetInstance.objectParticles;
@@ -30,21 +32,15 @@ public class PixelDestroyerA : MonoBehaviour {
 		switch(coll.gameObject.tag)
 		{
 			case "Pink":
-
-			Singleton.GetInstance.gm.pinkPixelsDestroyed++;
-
+				Singleton.GetInstance.gm.pinkPixelsDestroyed++;
 			break;
 
 			case "Green":
-
-			Singleton.GetInstance.gm.greenPixelsDestroyed++;
-
+				Singleton.GetInstance.gm.greenPixelsDestroyed++;
 			break;
 
 			case "Blue":
-
-			Singleton.GetInstance.gm.bluePixelsDestroyed++;
-
+				Singleton.GetInstance.gm.bluePixelsDestroyed++;
 			break;
 		}
 	}
@@ -93,6 +89,8 @@ public class PixelDestroyerA : MonoBehaviour {
 
 		if (Singleton.GetInstance.gm.totalPixelsDestroyed == Singleton.GetInstance.gm.totalPixels){
 			
+			SetLevel();
+
 			int score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
 
 			if(score > PlayerPrefs.GetInt("Record1") || !PlayerPrefs.HasKey("Record1"))
@@ -101,12 +99,7 @@ public class PixelDestroyerA : MonoBehaviour {
 				PlayerPrefs.Save();
 			}
 
-			if(PlayerPrefs.GetInt("Level") == 0){
-
-			}
-			else{
-				SceneManager.LoadScene("Victory");
-			}
+			SceneManager.LoadScene("GameA");
 		}
 		else if(Singleton.GetInstance.gm.heartGainPixels >= Singleton.GetInstance.gm.totalPixels * 0.35){
 			
@@ -125,6 +118,23 @@ public class PixelDestroyerA : MonoBehaviour {
 		gameObject.SetActive(false);
 			
 		}  
+	}
+
+	void SetLevel(){
+		if(PlayerPrefs.GetInt("Level") == 0 || !PlayerPrefs.HasKey("Level")){
+			PlayerPrefs.SetInt("Level", 1);	
+		}
+		else if(PlayerPrefs.GetInt("Level") == 1){
+			PlayerPrefs.SetInt("Level", 2);
+		}
+		else if(PlayerPrefs.GetInt("Level") == 2){
+			PlayerPrefs.SetInt("Level", 3);
+		}
+		else{
+			SceneManager.LoadScene("Victory");
+		}
+
+		PlayerPrefs.Save();
 	}
 
 	void Sound()

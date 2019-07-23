@@ -42,18 +42,21 @@ public class GameManager : MonoBehaviour {
     [HideInInspector] public bool switchSound;
     
     void Start () {
+
         totalPixelsDestroyed = 0;
         pinkPixelsDestroyed = 0;   
         bluePixelsDestroyed = 0;
         greenPixelsDestroyed = 0;
         switchSound = true;
+
         //se tiver no pc vai ser joystick
-        if(!Application.isMobilePlatform)
-        {
-      // PlayerPrefs.SetString("PlayerMovement", "joyStick");
+        if(!Application.isMobilePlatform){
+            // PlayerPrefs.SetString("PlayerMovement", "joyStick");
         }
+
         print("ac" + totalPixels);
         GeneratingColorRate();
+
         if (PlayerPrefs.GetString("PlayerMovement") == "swipe")
         {
             swipeTutorial.SetActive(true);
@@ -68,8 +71,10 @@ public class GameManager : MonoBehaviour {
         totalPixelsDestroyed = 0;
         AudioManager audio = AudioManager.instance;
         if(audio != null){
+
             audio.StopAll();
             audio.Play("Glitch 3.0");
+
         }
         player = Singleton.GetInstance.player;
         playerPos = new Vector2(0,-4);
@@ -113,8 +118,8 @@ public class GameManager : MonoBehaviour {
 
     void GeneratingColorRate()
     {
-        pinkRate =Random.Range(20,46);
-        blueRate =Random.Range(20,46);
+        pinkRate = Random.Range(20,46);
+        blueRate = Random.Range(20,46);
         greenRate = 100 - pinkRate - blueRate;
 
         canSpawnPinkPixels  = Mathf.CeilToInt(pinkRate * totalPixels / 100);
@@ -125,7 +130,7 @@ public class GameManager : MonoBehaviour {
         bluePixels = canSpawnBluePixels +1;
         greenPixels = canSpawnGreenPixels + 1;
 
-       print("dc" + totalPixels);
+        print("dc" + totalPixels);
         print("pink " + canSpawnPinkPixels);
         print("blue " + canSpawnBluePixels);
         print("green " + canSpawnGreenPixels);
