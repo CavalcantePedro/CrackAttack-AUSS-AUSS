@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameOverLevelSelect : MonoBehaviour
 {
     
-    
     public void GameInit()
 	{
 		if (PlayerPrefs.GetString("Dificuldade") == "Hard")
