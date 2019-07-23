@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     void Awake() 
     {
         if(PlayerPrefs.GetString("Dancing") == "Off"){ 
+            
             Singleton.GetInstance.robot.GetComponent<Animator>().enabled = false;
             Singleton.GetInstance.dich.GetComponent<Animator>().enabled = false;
             Singleton.GetInstance.mono.GetComponent<Animator>().enabled = false;
@@ -19,8 +20,9 @@ public class LevelManager : MonoBehaviour
         }
 
         if(PlayerPrefs.GetString("Dancing") == "On"){
+
             Singleton.GetInstance.robot.GetComponent<Animator>().enabled = true;
-                Singleton.GetInstance.dich.GetComponent<Animator>().enabled = true;
+            Singleton.GetInstance.dich.GetComponent<Animator>().enabled = true;
             Singleton.GetInstance.mono.GetComponent<Animator>().enabled = true;
             Singleton.GetInstance.trich.GetComponent<Animator>().enabled = true;
             Singleton.GetInstance.corazon.GetComponent<Animator>().enabled = true;
