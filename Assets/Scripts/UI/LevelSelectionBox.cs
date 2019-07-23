@@ -47,6 +47,7 @@ public class LevelSelectionBox : MonoBehaviour
         ManagingLevels();
         CheckingRecord();
         GameInit();
+        StartCoroutine(InteractionSwitch());
     }
 
     public void SelectPreviousLevel(){
@@ -54,6 +55,7 @@ public class LevelSelectionBox : MonoBehaviour
         ManagingLevels();
         CheckingRecord();
         GameInit();
+        StartCoroutine(InteractionSwitch());
     }
     
     public void DifficultyChange(){
@@ -148,6 +150,15 @@ public class LevelSelectionBox : MonoBehaviour
                 PlayerPrefs.SetString("Dancing","On");
             break;
         }
+    }
+
+    IEnumerator InteractionSwitch()
+    {
+        plusOneBtn.GetComponent<Button>().interactable = !plusOneBtn.GetComponent<Button>().interactable;
+        minusOneBtn.GetComponent<Button>().interactable = !minusOneBtn.GetComponent<Button>().interactable;
+        yield return new WaitForSeconds(0.25f);
+        plusOneBtn.GetComponent<Button>().interactable = !plusOneBtn.GetComponent<Button>().interactable;
+        minusOneBtn.GetComponent<Button>().interactable = !minusOneBtn.GetComponent<Button>().interactable;
     }
 
     IEnumerator UpdateBox() {
