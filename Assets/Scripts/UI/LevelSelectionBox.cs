@@ -127,6 +127,16 @@ public class LevelSelectionBox : MonoBehaviour
 
     void GameInit(){
 
+        if(PlayerPrefs.HasKey("Level")){
+            //levelNumber = PlayerPrefs.GetInt("Level");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Level", levelNumber);
+        }
+
+        print("Number info (1):" + PlayerPrefs.GetInt("Level"));
+
         switch(levelNumber){
             case 1:
                 print("Entrou");
