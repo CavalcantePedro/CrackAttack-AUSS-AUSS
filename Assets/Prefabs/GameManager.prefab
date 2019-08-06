@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4409211217329230}
   - component: {fileID: 114672696316361928}
   - component: {fileID: 114991852339078206}
-  - component: {fileID: 6936640711680491109}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -65,6 +64,7 @@ MonoBehaviour:
   pinkPixelsDestroyed: 0
   bluePixelsDestroyed: 0
   greenPixelsDestroyed: 0
+  switchSound: 0
 --- !u!114 &114991852339078206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,15 +81,3 @@ MonoBehaviour:
   oneParticle: {fileID: 0}
   animGlitchUp: {fileID: 0}
   animGlitchDown: {fileID: 0}
---- !u!114 &6936640711680491109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663125008151436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1397d205c7847f042bc8a472b4dfd09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

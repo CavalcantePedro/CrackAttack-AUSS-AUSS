@@ -52,19 +52,7 @@ public class CodeUI : MonoBehaviour {
 		StartCoroutine(ChangingScene());
 	}
 
-	public void GameInit()
-	{
-		
-		if (Singleton.GetInstance.ls.difficulty == "hard"){
-		  	PlayerPrefs.SetString("Dificuldade" , "Hard");
-          	SceneManager.LoadScene(sceneBuildIndex: 2);
-		}
-		else {
-          	SceneManager.LoadScene(sceneBuildIndex: 6);
-		}
 
-		
-	}
 	
 }
 
