@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e19aa501468123e418009e7888e2b362
   - enabled: 1
-    path: Assets/Scenes/GameB.unity
-    guid: 570f8289169d2184284f6f315f04ab92
-  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 9646a2c147353e64aa001c9fa9301823
   - enabled: 1
@@ -24,6 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Victory.unity
     guid: 537e58c1eb10fd84b8b9d1aa967ff43c
   - enabled: 1
-    path: Assets/Scenes/GameA.unity
+    path: Assets/Scenes/GameA1.unity
     guid: 60730ba95cb0bc84d847f92829b53f8e
+  - enabled: 1
+    path: Assets/Scenes/GameA2.unity
+    guid: 69fdcf79f8dbfb34ba4cc05d9dc72436
+  - enabled: 1
+    path: Assets/Scenes/GameA3.unity
+    guid: 8e13c911ec5144547a3dc4d6062f6cfd
+  - enabled: 1
+    path: Assets/Scenes/GameA4.unity
+    guid: ed730ff36eff46448b7de30bf6230c5b
   m_configObjects: {}

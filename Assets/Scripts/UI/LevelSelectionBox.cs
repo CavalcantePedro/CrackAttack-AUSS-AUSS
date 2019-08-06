@@ -30,7 +30,7 @@ public class LevelSelectionBox : MonoBehaviour
     void Start(){
 
         levelNumber = 1;
-        GameInit();
+        //GameInit();
         ManagingLevels();
         CheckingRecord();
     
@@ -46,7 +46,7 @@ public class LevelSelectionBox : MonoBehaviour
         levelNumber++;
         ManagingLevels();
         CheckingRecord();
-        GameInit();
+       // GameInit();
         StartCoroutine(InteractionSwitch());
     }
 
@@ -54,11 +54,11 @@ public class LevelSelectionBox : MonoBehaviour
         levelNumber--;
         ManagingLevels();
         CheckingRecord();
-        GameInit();
+        //GameInit();
         StartCoroutine(InteractionSwitch());
     }
     
-    public void DifficultyChange(){
+    /* public void DifficultyChange(){
         
         if(difficultySwitch.isOn){
             difficulty = "hard";
@@ -68,7 +68,7 @@ public class LevelSelectionBox : MonoBehaviour
             difficulty = "easy";
         }
 
-    }
+    }*/
 
     void ManagingLevels()
     {
@@ -125,39 +125,33 @@ public class LevelSelectionBox : MonoBehaviour
         }
     }
 
-    void GameInit(){
+    public void GameInit(){
 
-        if(PlayerPrefs.HasKey("Level")){
-            //levelNumber = PlayerPrefs.GetInt("Level");
-        }
-        else
-        {
-            PlayerPrefs.SetInt("Level", levelNumber);
-        }
+        
 
         print("Number info (1):" + PlayerPrefs.GetInt("Level"));
 
-        switch(levelNumber){
+         switch(levelNumber){
             case 1:
                 print("Entrou");
-                PlayerPrefs.SetString("Shield","Off");
-                PlayerPrefs.SetString("Dancing","Off");
+                 PlayerPrefs.SetInt("Level", levelNumber);
+                SceneManager.LoadScene("GameA1");
             break;
             
             case 2:
                 print("Entrou2");
-                PlayerPrefs.SetString("Shield","Off");
-                PlayerPrefs.SetString("Dancing","On");
+                 PlayerPrefs.SetInt("Level", levelNumber);
+                SceneManager.LoadScene("GameA2");
             break;
 
             case 3:
-                PlayerPrefs.SetString("Shield","On");
-                PlayerPrefs.SetString("Dancing","Off");
+             PlayerPrefs.SetInt("Level", levelNumber);
+               SceneManager.LoadScene("GameA3");
             break;
 
             case 4:
-                PlayerPrefs.SetString("Shield","On");
-                PlayerPrefs.SetString("Dancing","On");
+             PlayerPrefs.SetInt("Level", levelNumber);
+                SceneManager.LoadScene("GameA4");
             break;
         }
     }

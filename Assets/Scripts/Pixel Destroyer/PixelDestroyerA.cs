@@ -89,7 +89,7 @@ public class PixelDestroyerA : MonoBehaviour {
 
 		if (Singleton.GetInstance.gm.totalPixelsDestroyed == Singleton.GetInstance.gm.totalPixels){
 			
-			SetLevel();
+			
 
 			int score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
 
@@ -99,7 +99,8 @@ public class PixelDestroyerA : MonoBehaviour {
 				PlayerPrefs.Save();
 			}
 
-			SceneManager.LoadScene("GameA");
+            SetLevel();
+			//SceneManager.LoadScene("GameA");
 		}
 		else if(Singleton.GetInstance.gm.heartGainPixels >= Singleton.GetInstance.gm.totalPixels * 0.35){
 			
@@ -122,13 +123,20 @@ public class PixelDestroyerA : MonoBehaviour {
 
 	void SetLevel(){
 		if(PlayerPrefs.GetInt("Level") == 0 || !PlayerPrefs.HasKey("Level")){
-			PlayerPrefs.SetInt("Level", 1);	
+			PlayerPrefs.SetInt("Level", 1);
+			
 		}
 		else if(PlayerPrefs.GetInt("Level") == 1){
 			PlayerPrefs.SetInt("Level", 2);
+			SceneManager.LoadScene("GameA2");
 		}
 		else if(PlayerPrefs.GetInt("Level") == 2){
 			PlayerPrefs.SetInt("Level", 3);
+			SceneManager.LoadScene("GameA3");
+		}
+		else if(PlayerPrefs.GetInt("Level") == 3){
+			PlayerPrefs.SetInt("Level", 4);
+			SceneManager.LoadScene("GameA4");
 		}
 		else{
 			SceneManager.LoadScene("Victory");
