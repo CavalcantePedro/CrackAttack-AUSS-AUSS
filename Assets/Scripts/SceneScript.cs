@@ -13,11 +13,13 @@ public class SceneScript : MonoBehaviour {
     }
 
     private void Start() {
-        if (SceneManager.GetActiveScene().buildIndex == 4)
+        
+
+       /*  if (SceneManager.GetActiveScene().buildIndex == 4)
         {          
             delay = 30f;
             Invoke("CreditsToMenu", delay);
-        }
+        }*/
 
         if(SceneManager.GetActiveScene().name == "FirstTimeSettings")
         {
@@ -31,8 +33,10 @@ public class SceneScript : MonoBehaviour {
                 SceneManager.LoadScene("MainMenu");
             }
         }
+            delay = 30f;
+            Invoke("CreditsToMenu", delay);
     }
-
+            
    void CreditsToMenu(){
         sc.TransitionToMenu();
     }
