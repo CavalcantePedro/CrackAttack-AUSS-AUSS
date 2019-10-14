@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 114199620985641618}
   - component: {fileID: 95309599525073870}
   m_Layer: 5
-  m_Name: GlitchDown
+  m_Name: OriginalGlitchDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 114008063553255786}
   - component: {fileID: 95391259315571926}
   m_Layer: 5
-  m_Name: GlitchUp
+  m_Name: OriginalGlitchUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,9 +240,9 @@ GameObject:
   - component: {fileID: 2676208017912802650}
   - component: {fileID: 4405337649652931974}
   - component: {fileID: 4667712966634421513}
-  - component: {fileID: 4830198118971875795}
+  - component: {fileID: 814357735}
   m_Layer: 5
-  m_Name: GlitchUp
+  m_Name: MonGlitchUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &4830198118971875795
+--- !u!95 &814357735
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ Animator:
   m_GameObject: {fileID: 2655070656598990556}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38368d6b9b6f1af47b221d71090ce3a0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0b36bfaa42ec07c4aa3a43a0fa2102c8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -339,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2256946259460761528
 Transform:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 725084784508129341}
   - component: {fileID: 4942978695999589730}
   m_Layer: 5
-  m_Name: GlitchDown
+  m_Name: TricGlitchDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,7 +442,7 @@ Animator:
   m_GameObject: {fileID: 4405184776598514814}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38368d6b9b6f1af47b221d71090ce3a0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8e8ffa36d483e884eb5c160e042d2c3b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -462,9 +462,9 @@ GameObject:
   - component: {fileID: 4896246871844379735}
   - component: {fileID: 1719551226229646682}
   - component: {fileID: 1770895529698987835}
-  - component: {fileID: 8736567123730666570}
+  - component: {fileID: 1780447907}
   m_Layer: 5
-  m_Name: GlitchUp
+  m_Name: TricGlitchUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &8736567123730666570
+--- !u!95 &1780447907
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ Animator:
   m_GameObject: {fileID: 5944099699569240697}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38368d6b9b6f1af47b221d71090ce3a0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8e8ffa36d483e884eb5c160e042d2c3b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -557,9 +557,9 @@ GameObject:
   - component: {fileID: 1078835720794702450}
   - component: {fileID: 5017879363198323788}
   - component: {fileID: 2439121437021334877}
-  - component: {fileID: 8969447817430549483}
+  - component: {fileID: 193926225}
   m_Layer: 5
-  m_Name: GlitchUp
+  m_Name: DicGlitchUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &8969447817430549483
+--- !u!95 &193926225
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -632,7 +632,7 @@ Animator:
   m_GameObject: {fileID: 6154896881123788535}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38368d6b9b6f1af47b221d71090ce3a0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2dd6a188b20846249bd5544182bb9818, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -748,9 +748,9 @@ GameObject:
   - component: {fileID: 4706675733042217956}
   - component: {fileID: 5320924076977089318}
   - component: {fileID: 7481660388945640582}
-  - component: {fileID: 96413775833276166}
+  - component: {fileID: 1893961860}
   m_Layer: 5
-  m_Name: GlitchDown
+  m_Name: MonGlitchDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &96413775833276166
+--- !u!95 &1893961860
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -823,7 +823,7 @@ Animator:
   m_GameObject: {fileID: 8956036621848052654}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38368d6b9b6f1af47b221d71090ce3a0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0b36bfaa42ec07c4aa3a43a0fa2102c8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 169210960201524941}
   - component: {fileID: 9120990864356312581}
   m_Layer: 5
-  m_Name: GlitchDown
+  m_Name: DicGlitchDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -918,7 +918,7 @@ Animator:
   m_GameObject: {fileID: 9118161895109529831}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38368d6b9b6f1af47b221d71090ce3a0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2dd6a188b20846249bd5544182bb9818, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
