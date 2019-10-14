@@ -1,17 +1,33 @@
 fileFormatVersion: 2
-guid: b54bc6556e412f84ea8627e2cf588a42
+guid: 58dd60d745b6fea42a034a73e2382c6f
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Glitch_0
-    21300002: Glitch_1
-    21300004: Glitch_2
-    21300006: Glitch_3
-    21300008: Glitch_4
-    21300010: Glitch_5
-    21300012: Glitch_6
-    21300014: Glitch_7
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Dic_0
+  - first:
+      213: 21300002
+    second: Dic_1
+  - first:
+      213: 21300004
+    second: Dic_2
+  - first:
+      213: 21300006
+    second: Dic_3
+  - first:
+      213: 21300008
+    second: Dic_4
+  - first:
+      213: 21300010
+    second: Dic_5
+  - first:
+      213: 21300012
+    second: Dic_6
+  - first:
+      213: 21300014
+    second: Dic_7
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -29,6 +45,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -39,7 +57,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -64,7 +82,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -75,7 +93,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -86,7 +105,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -97,7 +117,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -108,11 +129,12 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Glitch_0
+      name: Dic_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,13 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d98b8047dc37d24894d1adaa894189d
+      spriteID: f09704c7a07390549943d5ee379dde15
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch_1
+      name: Dic_1
       rect:
         serializedVersion: 2
         x: 512
@@ -146,13 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c40bb7553249f247ad6c55a32d2f84b
+      spriteID: 6f6def53d17e89041a7b721f8a29754c
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch_2
+      name: Dic_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -166,13 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 720b6d558cda0d94a8f2d32bdbc83dfd
+      spriteID: ef7df1d9af7a7ac4c81c3473f2d6d90f
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch_3
+      name: Dic_3
       rect:
         serializedVersion: 2
         x: 0
@@ -186,13 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a03ee1b5adc47a4bbd778efd1a847e0
+      spriteID: ed048e988f8975e47b5b398378eb366d
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch_4
+      name: Dic_4
       rect:
         serializedVersion: 2
         x: 512
@@ -206,13 +232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bf73d852a544a94faf9c778e8030054
+      spriteID: b6fdd61db7509e74c9c6b83c48b524ec
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch_5
+      name: Dic_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -226,13 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60e0a0be98d3719489f84f27e9744548
+      spriteID: 0cebe95d47f3eba42a6e01906d2568bc
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch_6
+      name: Dic_6
       rect:
         serializedVersion: 2
         x: 0
@@ -246,13 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a79b586ea12bff49994abb1da955bee
+      spriteID: a1633f33a5e167448b30b4bce65f50a5
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch_7
+      name: Dic_7
       rect:
         serializedVersion: 2
         x: 512
@@ -266,7 +295,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52bf65fcd290fbb4aa04be984c52672d
+      spriteID: 0a9b8e6c5e2b3a94c8a20b1256bbe6ac
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -274,12 +304,16 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d7042df83dfb2a54babd13d26203e66a
+    spriteID: c1ba98a918e1ed3408937abed782033a
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
