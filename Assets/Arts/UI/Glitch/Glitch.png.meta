@@ -1,17 +1,33 @@
 fileFormatVersion: 2
-guid: 0afc83dce825bc545b3856fd046a1e3f
+guid: b54bc6556e412f84ea8627e2cf588a42
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Tri_0
-    21300002: Tri_1
-    21300004: Tri_2
-    21300006: Tri_3
-    21300008: Tri_4
-    21300010: Tri_5
-    21300012: Tri_6
-    21300014: Tri_7
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Glitch_0
+  - first:
+      213: 21300002
+    second: Glitch_1
+  - first:
+      213: 21300004
+    second: Glitch_2
+  - first:
+      213: 21300006
+    second: Glitch_3
+  - first:
+      213: 21300008
+    second: Glitch_4
+  - first:
+      213: 21300010
+    second: Glitch_5
+  - first:
+      213: 21300012
+    second: Glitch_6
+  - first:
+      213: 21300014
+    second: Glitch_7
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -66,7 +82,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -77,7 +93,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -88,7 +105,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -99,7 +117,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,11 +129,12 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tri_0
+      name: Glitch_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,13 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 867ec2e19fa78f04599e71f7d1fccad2
+      spriteID: 6d98b8047dc37d24894d1adaa894189d
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tri_1
+      name: Glitch_1
       rect:
         serializedVersion: 2
         x: 512
@@ -148,13 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08127bca85c2bc2408fc73af3fc3cbe1
+      spriteID: 4c40bb7553249f247ad6c55a32d2f84b
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tri_2
+      name: Glitch_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -168,13 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c32624e44eae9934c9ef7285e037a1c4
+      spriteID: 720b6d558cda0d94a8f2d32bdbc83dfd
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tri_3
+      name: Glitch_3
       rect:
         serializedVersion: 2
         x: 0
@@ -188,13 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec628c0fa6663d94ab8815d5ae7b491f
+      spriteID: 8a03ee1b5adc47a4bbd778efd1a847e0
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tri_4
+      name: Glitch_4
       rect:
         serializedVersion: 2
         x: 512
@@ -208,13 +232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57607b86468cae64da96ea95f787de73
+      spriteID: 5bf73d852a544a94faf9c778e8030054
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tri_5
+      name: Glitch_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -228,13 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dff75af37055054e8daaf7ae8cf7423
+      spriteID: 60e0a0be98d3719489f84f27e9744548
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tri_6
+      name: Glitch_6
       rect:
         serializedVersion: 2
         x: 0
@@ -248,13 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56095f3485c35354a8cae339b80d624d
+      spriteID: 0a79b586ea12bff49994abb1da955bee
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tri_7
+      name: Glitch_7
       rect:
         serializedVersion: 2
         x: 512
@@ -268,7 +295,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c568723ceea33b54f8c8c3f3265be221
+      spriteID: 52bf65fcd290fbb4aa04be984c52672d
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -276,11 +304,13 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8c5b362388890cb4a845cce97d045971
+    spriteID: d7042df83dfb2a54babd13d26203e66a
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
