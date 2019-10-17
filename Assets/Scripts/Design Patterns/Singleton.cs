@@ -14,6 +14,8 @@ public class Singleton : MonoBehaviour {
 	public GameObject shield;
     public GameObject player;
 
+	public SceneController sceneController;
+
 	public PaddleController playerScript;
 
     public Canvas HUDGameplay;
@@ -42,6 +44,8 @@ public class Singleton : MonoBehaviour {
 	public TimerCount time;
 
     private static Singleton instance;
+
+	
 
 
 	
