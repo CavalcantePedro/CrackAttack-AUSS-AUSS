@@ -13,8 +13,6 @@ public class CodeUI : MonoBehaviour {
 	public GameObject levelSelection;
 	public ParticleSystem zeroParticle;
 	public ParticleSystem oneParticle;
-	public Animator anim;
-	public Animator anim2;
 	private Rigidbody2D rb;
 
 	[SerializeField] private Button btnSettings;
@@ -38,10 +36,12 @@ public class CodeUI : MonoBehaviour {
 		zeroParticle.Clear();
 		oneParticle.Clear();
         AudioManager.instance.Play("Transition");
-		anim.SetBool("glitching",true);
-		anim2.SetBool("glitching",true);
+		Singleton.GetInstance.sceneController.anim.SetBool("glitching",true);
+		Singleton.GetInstance.sceneController.anim2.SetBool("glitching",true);
+		print("rodei aq");
 		yield return new WaitForSeconds(1.5f);
 		levelSelection.SetActive(true);
+		print("abri a caixinha");
 		
 	}
 

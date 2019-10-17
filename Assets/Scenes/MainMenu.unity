@@ -6020,6 +6020,7 @@ MonoBehaviour:
   trich: {fileID: 0}
   shield: {fileID: 0}
   player: {fileID: 0}
+  sceneController: {fileID: 623546475}
   playerScript: {fileID: 0}
   HUDGameplay: {fileID: 0}
   cameraScript: {fileID: 0}
@@ -9211,8 +9212,6 @@ MonoBehaviour:
   levelSelection: {fileID: 1310260750}
   zeroParticle: {fileID: 2067390565}
   oneParticle: {fileID: 257456665}
-  anim: {fileID: 1942770551}
-  anim2: {fileID: 1006275501}
   btnSettings: {fileID: 2096674940}
   btnCredits: {fileID: 1417569434}
 --- !u!1 &2028933372
