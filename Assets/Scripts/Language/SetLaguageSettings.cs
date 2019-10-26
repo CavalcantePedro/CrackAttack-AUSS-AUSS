@@ -46,8 +46,8 @@ public class SetLaguageSettings : MonoBehaviour
     }
 
     public void LanguageBtn(int index){
-        flagAnim.UpdateFlags();
         PlayerPrefs.SetInt("Language", index);
+        flagAnim.UpdateFlags();
         LanguageUpdate();
         PlayerPrefs.Save();
     }

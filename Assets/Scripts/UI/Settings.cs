@@ -35,23 +35,23 @@ public class Settings : MonoBehaviour {
 	}
 
 	public void UpdateFlags(){
-		/*
+		
 		
 		//Put this animation On later...!!!!!!
 
 		switch(PlayerPrefs.GetInt("Language"))
         {
-            case 0:
-                ptFlag.SetTrigger("stopBrazilianFlag");
-				enFlag.SetTrigger("glitchUSAFlag");
+            case 0: // ligou o ingles
+				enFlag.SetBool("glitching",true);
+                ptFlag.SetBool("glitching",false);
             break;
 
-            case 1:
-                ptFlag.SetTrigger("glitchBrazilianFlag");
-				enFlag.SetTrigger("stopUSAFlag");
+            case 1: // ligou o pt
+                ptFlag.SetBool("glitching",true);
+                enFlag.SetBool("glitching",false);
             break;
         }
-		*/
+		
 	}
 
 	public void ChoosingArrows()

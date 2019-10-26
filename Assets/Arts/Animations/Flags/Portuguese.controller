@@ -9,14 +9,8 @@ AnimatorController:
   m_Name: Portuguese
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: glitchBrazilianFlag
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: stopBrazilianFlag
-    m_Type: 9
+  - m_Name: glitching
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -43,7 +37,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: glitchBrazilianFlag
+    m_ConditionEvent: glitching
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102414254615748286}
@@ -67,8 +61,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: stopBrazilianFlag
+  - m_ConditionMode: 2
+    m_ConditionEvent: glitching
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102950065165903318}
@@ -149,10 +143,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102414254615748286}
-    m_Position: {x: 288, y: 24, z: 0}
+    m_Position: {x: 370, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102950065165903318}
-    m_Position: {x: 288, y: 120, z: 0}
+    m_Position: {x: 330, y: 160, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
