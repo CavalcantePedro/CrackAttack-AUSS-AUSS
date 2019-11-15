@@ -30,7 +30,7 @@ public class SceneScript : MonoBehaviour {
             
             else
             {
-                SceneManager.LoadScene("MainMenu");
+               SceneManager.LoadScene("MainMenu");
             }
         }
             delay = 30f;
