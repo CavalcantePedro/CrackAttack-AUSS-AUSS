@@ -37,7 +37,7 @@ public class PlayerLosedTransition : MonoBehaviour {
         AudioManager.instance.Play("Transition");
         
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(sceneBuildIndex: 3);
+        SceneManager.LoadScene(sceneBuildIndex: 2);
         
 
     }
