@@ -248,7 +248,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bab547d6bdf33c444b7e781ba827115a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c40a6bc21b8c5134ab6404f4d4003ba8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -350,7 +350,7 @@ MonoBehaviour:
   dbValue: 0
   source: {fileID: 620602968}
   amnVisual: 7
-  visualModifier: 1000
+  visualModifier: 2000
   smoothSpeed: 10
   maxVisualScale: 5
   tile: {fileID: 3143035656148819920, guid: dea1bc29ee2cde6499feb70e626d47ff, type: 3}
@@ -398,7 +398,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bab547d6bdf33c444b7e781ba827115a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c40a6bc21b8c5134ab6404f4d4003ba8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -500,7 +500,7 @@ MonoBehaviour:
   dbValue: 0
   source: {fileID: 622236227}
   amnVisual: 7
-  visualModifier: 1000
+  visualModifier: 2000
   smoothSpeed: 10
   maxVisualScale: 5
   tile: {fileID: 3143035656148819920, guid: dea1bc29ee2cde6499feb70e626d47ff, type: 3}

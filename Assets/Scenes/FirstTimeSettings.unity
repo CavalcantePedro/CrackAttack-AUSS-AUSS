@@ -6645,7 +6645,7 @@ PrefabInstance:
         type: 3}
       propertyPath: EffectMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 2a3eb28ff03039a4fb08592757f11559, type: 2}
+      objectReference: {fileID: 2100000, guid: 98c9da6d0f50aa84b8d9b5e6158f5f22, type: 2}
     m_RemovedComponents:
     - {fileID: 114560832486445186, guid: f8a5d6b72c8c5c44d91d3998e75ce01f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f8a5d6b72c8c5c44d91d3998e75ce01f, type: 3}

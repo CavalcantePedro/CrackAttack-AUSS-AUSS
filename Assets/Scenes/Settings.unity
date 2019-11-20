@@ -6002,7 +6002,7 @@ PrefabInstance:
         type: 3}
       propertyPath: EffectMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 2a3eb28ff03039a4fb08592757f11559, type: 2}
+      objectReference: {fileID: 2100000, guid: 98c9da6d0f50aa84b8d9b5e6158f5f22, type: 2}
     m_RemovedComponents:
     - {fileID: 114560832486445186, guid: f8a5d6b72c8c5c44d91d3998e75ce01f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f8a5d6b72c8c5c44d91d3998e75ce01f, type: 3}
@@ -12482,10 +12482,7 @@ MonoBehaviour:
   controls: {fileID: 2078153101}
   language: {fileID: 1219687404}
   colorBlind: {fileID: 1065442913}
-<<<<<<< HEAD
-=======
   flagAnim: {fileID: 1387670272}
->>>>>>> de7f3c4... Flags Animation
 --- !u!1 &2078153099
 GameObject:
   m_ObjectHideFlags: 0

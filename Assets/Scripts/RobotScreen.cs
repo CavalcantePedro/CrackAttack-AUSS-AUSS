@@ -19,12 +19,6 @@ public class RobotScreen : MonoBehaviour {
 	public Text bluePercentUI;
 	public Text greenPercentUI;
 
-<<<<<<< HEAD
-	//public GameObject aussAndAuss;
-
-
-=======
->>>>>>> cae5653... BugFixes and Values Adjustment
     private void Start() 
 	{
 	totalPercent.SetActive(true);
@@ -36,11 +30,7 @@ public class RobotScreen : MonoBehaviour {
 	public void StopChanging()
 	{
 		colorPercent.SetActive(false);
-<<<<<<< HEAD
-		totalPercent.SetActive(false);
-=======
 		totalPercent.SetActive(false);	
->>>>>>> cae5653... BugFixes and Values Adjustment
 		StopAllCoroutines();
 	}
 
@@ -92,23 +82,6 @@ public class RobotScreen : MonoBehaviour {
 
 
 
-<<<<<<< HEAD
-	//IEnumerator ChangingScreens()
-	//{
-	//	for(;;)
-	//	{
-			
-	//		totalPercent.SetActive(true);
-	//		yield return new WaitForSeconds(Random.Range(1f,4f));
-	//		totalPercent.SetActive(false);
-	//		colorPercent.SetActive(true);
-	//		yield return new WaitForSeconds(Random.Range(1f,4f));
-	//		colorPercent.SetActive(false);
-	//		aussAndAuss.SetActive(true);		
-	//		yield return new WaitForSeconds(Random.Range(1f,4f));				
-	//	}
-	//}
-=======
 	IEnumerator ChangingScreens()
 	{
 		for(;;)
@@ -123,5 +96,4 @@ public class RobotScreen : MonoBehaviour {
 			yield return new WaitForSeconds(Random.Range(1f,4f));				
 		}
 	}
->>>>>>> cae5653... BugFixes and Values Adjustment
 }

@@ -8,7 +8,6 @@ public class GameOver : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
         AudioManager.instance.Play("GameOver");
     }
 }
