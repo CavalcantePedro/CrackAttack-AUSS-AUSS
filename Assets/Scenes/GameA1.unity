@@ -4208,11 +4208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500926239812914, guid: 37a0613b17985fa4c813ea0d4b1a13a9, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 10
 <<<<<<< HEAD
 >>>>>>> f969cf4... Level Config
 =======
 >>>>>>> c2f06c9... merge Bugfix
+=======
+      value: 12
+>>>>>>> 65a623e... New Assets (Cutscene :  AudioPlaceholder and DeathMoth Animation) // Robot Dying Spritesheet configured
       objectReference: {fileID: 0}
     - target: {fileID: 1733070184682290, guid: 37a0613b17985fa4c813ea0d4b1a13a9, type: 3}
       propertyPath: m_IsActive
@@ -5782,7 +5786,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &379549648
 GameObject:
@@ -7582,7 +7586,7 @@ Transform:
   - {fileID: 149116007}
   - {fileID: 334575128}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517136933
 GameObject:
@@ -20610,7 +20614,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179322837
 GameObject:
@@ -22813,7 +22817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4891921120783684, guid: 4709c55a77d179644a2eda6323422da5, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4891921120783684, guid: 4709c55a77d179644a2eda6323422da5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -26327,7 +26331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4396876401930716, guid: 94c33f67172421546b67db769e7623d8, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114712492225865942, guid: 94c33f67172421546b67db769e7623d8,
         type: 3}
@@ -32605,7 +32609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4320846278555890, guid: b403fdb53819d6b46a5ca6de57e44686, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114440803957798172, guid: b403fdb53819d6b46a5ca6de57e44686,
         type: 3}
@@ -35877,6 +35881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79167250dae14524982406dbbb0df546, type: 3}
+<<<<<<< HEAD
 --- !u!114 &2075903078 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114568273121458960, guid: 79167250dae14524982406dbbb0df546,
@@ -35893,6 +35898,8 @@ MonoBehaviour:
 >>>>>>> f969cf4... Level Config
 =======
 >>>>>>> c2f06c9... merge Bugfix
+=======
+>>>>>>> 65a623e... New Assets (Cutscene :  AudioPlaceholder and DeathMoth Animation) // Robot Dying Spritesheet configured
 --- !u!1 &2081242611
 GameObject:
   m_ObjectHideFlags: 0
@@ -36586,7 +36593,7 @@ Transform:
   - {fileID: 1868387157}
   - {fileID: 486975167}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2124665941
 MonoBehaviour:
@@ -38046,7 +38053,7 @@ RectTransform:
   - {fileID: 1831121846}
   - {fileID: 379549651}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -38648,7 +38655,7 @@ PrefabInstance:
     - target: {fileID: 8154288498098624874, guid: df35d0e557741b641b5b051c3f909fb0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8154288498098624874, guid: df35d0e557741b641b5b051c3f909fb0,
         type: 3}

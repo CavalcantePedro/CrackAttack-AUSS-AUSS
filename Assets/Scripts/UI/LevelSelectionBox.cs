@@ -20,7 +20,7 @@ public class LevelSelectionBox : MonoBehaviour
     [SerializeField] private Text recordText;
     private string recordSt;
 
-    private string recordPlayerPref;
+    private int recordPlayer;
 
     [Header("Difficulty")]
     [SerializeField] private Toggle difficultySwitch;
@@ -96,19 +96,19 @@ public class LevelSelectionBox : MonoBehaviour
 
         switch(levelNumber) {
             case 1:
-                recordPlayerPref = "Record1";
+                recordPlayer = PlayerPrefs.GetInt("Record1");
             break;
             
             case 2:
-                recordPlayerPref = "Record2";
+                recordPlayer = PlayerPrefs.GetInt("Record2");
             break;
 
             case 3:
-            recordPlayerPref = "Record3";
+                recordPlayer = PlayerPrefs.GetInt("Record3");
             break;
 
             case 4:
-            recordPlayerPref = "Record4";
+                recordPlayer = PlayerPrefs.GetInt("Record4");
             break;
         }
         
@@ -116,9 +116,9 @@ public class LevelSelectionBox : MonoBehaviour
     }
 
     void ShowingRecord() {
-        if(PlayerPrefs.HasKey(recordPlayerPref)) {
-            recordSt = PlayerPrefs.GetInt(recordPlayerPref).ToString();
-            recordText.text ="Record:" + recordSt;
+        if(recordPlayer > 0) {
+            //recordSt = PlayerPrefs.GetInt(recordPlayerPref).ToString();
+            recordText.text ="Record:" + recordPlayer.ToString();
         }
         else {
             recordText.text = "Record:0";
