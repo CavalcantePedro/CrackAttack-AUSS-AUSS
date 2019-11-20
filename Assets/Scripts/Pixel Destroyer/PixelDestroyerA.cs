@@ -14,7 +14,7 @@ public class PixelDestroyerA : MonoBehaviour {
 	void Start(){
 
 		print("Number info (2):" + PlayerPrefs.GetInt("Level"));
-
+        
 		sp = GetComponent<SpriteRenderer>();
 		StartCoroutine(ChoosingColors());
 		objParticles = Singleton.GetInstance.objectParticles;
@@ -87,18 +87,48 @@ public class PixelDestroyerA : MonoBehaviour {
 		{
 			CountingPixels(coll);
 
-		if (Singleton.GetInstance.gm.totalPixelsDestroyed == Singleton.GetInstance.gm.totalPixels){
-			
-			
-
+       //condição de vitoria
+		if (Singleton.GetInstance.gm.totalPixelsDestroyed == Singleton.GetInstance.gm.totalPixels)
+		{
+				
 			int score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
-
-			if(score > PlayerPrefs.GetInt("Record1") || !PlayerPrefs.HasKey("Record1"))
+            
+            print("AQUI CARALHO" + score);
+			switch(SceneManager.GetActiveScene().buildIndex)
 			{
-				PlayerPrefs.SetInt("Record" , score);
+				case 5 /*index da cena*/:
+				if(score > PlayerPrefs.GetInt("Record1") || !PlayerPrefs.HasKey("Record1"))
+			{
+				PlayerPrefs.SetInt("Record1" , score);
 				PlayerPrefs.Save();
 			}
+				break;
 
+				case 6:
+                if(score > PlayerPrefs.GetInt("Recor2") || !PlayerPrefs.HasKey("Record2"))
+			{
+				PlayerPrefs.SetInt("Record2" , score);
+				PlayerPrefs.Save();
+			}
+				break;
+
+				case 7:
+                if(score > PlayerPrefs.GetInt("Record3") || !PlayerPrefs.HasKey("Record3"))
+			{
+				PlayerPrefs.SetInt("Record3" , score);
+				PlayerPrefs.Save();
+			}
+				break;
+
+				case 8:
+                if(score > PlayerPrefs.GetInt("Record4") || !PlayerPrefs.HasKey("Record4"))
+			{
+				PlayerPrefs.SetInt("Record4" , score);
+				PlayerPrefs.Save();
+			}
+				break;
+			}
+			
             SetLevel();
 			//SceneManager.LoadScene("GameA");
 		}
