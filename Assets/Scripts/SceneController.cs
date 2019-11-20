@@ -65,6 +65,24 @@ public class SceneController : MonoBehaviour
         StartCoroutine(CreditsScene());
     }
 
+    public void TransitionToGameOne()
+    {
+        StartCoroutine(GameOneScene());
+    }
+
+    IEnumerator GameOneScene(){       
+        
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("glitching",true);
+		anim2.SetBool("glitching",true);
+        yield return new WaitForSeconds(0.1f);
+        AudioManager.instance.Play("Transition");
+        yield return new WaitForSeconds(1.7f);
+        SceneManager.LoadScene("GameA1");
+    }
+
+    
+
     IEnumerator SettingsScene(){       
         
         yield return new WaitForSeconds(0.5f);

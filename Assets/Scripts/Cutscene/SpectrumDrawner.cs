@@ -26,6 +26,8 @@ public class SpectrumDrawner : MonoBehaviour
 
     public float maxVisualScale; // 25f
 
+    public float  keepPercentage;
+
     public GameObject tile;
 
     //Resizing
@@ -56,7 +58,7 @@ public class SpectrumDrawner : MonoBehaviour
     {
         int visualIndex = 0;
         int spectrumIndex = 0; 
-        int averageSize = SAMPLE_SIZE / amnVisual;
+        int averageSize = (int)((SAMPLE_SIZE*keepPercentage) / amnVisual);
         
         while(visualIndex < amnVisual)
         {

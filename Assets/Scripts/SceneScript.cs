@@ -33,8 +33,22 @@ public class SceneScript : MonoBehaviour {
                SceneManager.LoadScene("MainMenu");
             }
         }
+
+        else if(SceneManager.GetActiveScene().name == "Cutscene")
+        {
+            delay = 25f;
+            Invoke("Cutscene", delay);
+        }
+        else
+        {
             delay = 30f;
             Invoke("CreditsToMenu", delay);
+        }
+    }
+
+    void Cutscene()
+    {
+        sc.TransitionToGameOne();
     }
             
    void CreditsToMenu(){
@@ -57,11 +71,6 @@ public class SceneScript : MonoBehaviour {
     public void ExitGame()
     {
        StartCoroutine(ExitingGame());
-	}
-
-	public void StartMenu()
-    {
-		
 	}
 
     IEnumerator ChangingTheScene(int index, float delay)
