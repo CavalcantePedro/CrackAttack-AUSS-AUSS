@@ -25,7 +25,7 @@ EditorBuildSettings:
     guid: 60730ba95cb0bc84d847f92829b53f8e
   - enabled: 1
     path: Assets/Scenes/GameA2.unity
-    guid: 245f79871d2068f4db05ecea2f8e1af9
+    guid: 89fbdbb5538d8a8408ad9cb739379e75
   - enabled: 1
     path: Assets/Scenes/GameA3.unity
     guid: 9b7dadd1a31d4f845b5f722d2d7d3e60
