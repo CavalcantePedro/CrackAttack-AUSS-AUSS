@@ -3,28 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class PixelDestroyerA : MonoBehaviour {
 	
 	private ObjectPoolerParticles objParticles;
 	private SpriteRenderer sp;
 	private int willSpawn;
 	private bool hasColor;
-
 	private int score;
 	
 	void Start(){
 
-		print("Number info (2):" + PlayerPrefs.GetInt("Level"));
+		//print("Number info (2):" + PlayerPrefs.GetInt("Level"));
         
 		sp = GetComponent<SpriteRenderer>();
 		StartCoroutine(ChoosingColors());
 		objParticles = Singleton.GetInstance.objectParticles;
 		
 	}
-
-	//(Collider2D coll)
-	//(Collision2D coll)
 
 	private void CountingPixels (Collider2D coll){
 
@@ -79,9 +74,6 @@ public class PixelDestroyerA : MonoBehaviour {
 
 	}
 
-	//OnTriggerEnter2D(Collider2D coll)
-	//OnCollisionEnter2D(Collision2D coll)
-
 	private void OnTriggerEnter2D(Collider2D coll)
 	{
 		
@@ -95,8 +87,8 @@ public class PixelDestroyerA : MonoBehaviour {
 				
 			score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
             
-           
-			StartCoroutine(PlayerWonTransition());
+            Score();
+		   
 		}
 		else if(Singleton.GetInstance.gm.heartGainPixels >= Singleton.GetInstance.gm.totalPixels * 0.35){
 			
@@ -117,60 +109,24 @@ public class PixelDestroyerA : MonoBehaviour {
 		}  
 	}
 
-	void SetLevel()
-	{
-		if(PlayerPrefs.GetInt("Level") == 0 || !PlayerPrefs.HasKey("Level")){
-			PlayerPrefs.SetInt("Level", 1);
-			
-		}
-		else if(PlayerPrefs.GetInt("Level") == 1){
-			PlayerPrefs.SetInt("Level", 2);
-			SceneManager.LoadScene("GameA2");
-		}
-		else if(PlayerPrefs.GetInt("Level") == 2){
-			PlayerPrefs.SetInt("Level", 3);
-			SceneManager.LoadScene("GameA3");
-		}
-		else if(PlayerPrefs.GetInt("Level") == 3){
-			PlayerPrefs.SetInt("Level", 4);
-			SceneManager.LoadScene("GameA4");
-		}
-		else{
-			SceneManager.LoadScene("Victory");
-		}
-
-		PlayerPrefs.Save();
-	}
-
+	
 	void Sound()
 	{
 		if(Singleton.GetInstance.gm.switchSound)
 		{		
 			AudioManager.instance.Play("Crack");
 			Singleton.GetInstance.gm.switchSound = false;
-			print("tocando o  crack");	
+		//	print("tocando o  crack");	
 		}
 		else{
 			AudioManager.instance.Play("Attack");
 			Singleton.GetInstance.gm.switchSound = true;
-			print("attack");
+		//	print("attack");
 		}
 	}
 
-	IEnumerator PlayerWonTransition()
+    void Score()
 	{
-		Singleton.GetInstance.robotAnim.Death();
-        ObjectPooler.instance.StopAllBalls();
-        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = false;
-        AudioManager.instance.StopAll();
-        yield return new WaitForSeconds(2f);
-        Singleton.GetInstance.sceneController.anim.SetBool("glitching",true);
-        Singleton.GetInstance.sceneController.anim2.SetBool("glitching",true);
-        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = true;
-        AudioManager.instance.Play("Transition");
-        
-        yield return new WaitForSeconds(1.5f);
-
 		switch(SceneManager.GetActiveScene().buildIndex)
 			{
 				case 5 /*index da cena*/:
@@ -205,10 +161,10 @@ public class PixelDestroyerA : MonoBehaviour {
 			}
 				break;
 			}
-			
-            SetLevel();
-			//SceneManager.LoadScene("GameA");
-			yield return null;
+			 Singleton.GetInstance.sceneController.TransitionPlayerWon();
+			 //StartCoroutine(PlayerWonTransition());
 	}
+
+	
 
 }

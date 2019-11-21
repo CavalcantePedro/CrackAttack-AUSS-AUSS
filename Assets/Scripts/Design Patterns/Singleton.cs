@@ -45,6 +45,7 @@ public class Singleton : MonoBehaviour {
 
 	public RobotAnimControl robotAnim;
 
+    
     private static Singleton instance;
 
 	

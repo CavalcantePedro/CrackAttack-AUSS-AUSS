@@ -29,7 +29,7 @@ public class CodeUI : MonoBehaviour {
 		btnSettings.interactable = false;
 	}
 
-	IEnumerator ChangingScene(){
+	public IEnumerator ChangingScene(){
 		yield return new WaitForSeconds(1.5f);
 		canvas.SetActive(false);
 		sp.color = invisible;
@@ -38,10 +38,10 @@ public class CodeUI : MonoBehaviour {
         AudioManager.instance.Play("Transition");
 		Singleton.GetInstance.sceneController.anim.SetBool("glitching",true);
 		Singleton.GetInstance.sceneController.anim2.SetBool("glitching",true);
-		print("rodei aq");
+		//print("rodei aq");
 		yield return new WaitForSeconds(1.5f);
 		levelSelection.SetActive(true);
-		print("abri a caixinha");
+		//print("abri a caixinha");
 		
 	}
 

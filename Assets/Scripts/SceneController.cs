@@ -69,6 +69,10 @@ public class SceneController : MonoBehaviour
     {
         StartCoroutine(GameOneScene());
     }
+    public void TransitionPlayerWon()
+    {
+        StartCoroutine(PlayerWonTransition());
+    }
 
     IEnumerator GameOneScene(){       
         
@@ -114,4 +118,50 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(1.7f);
         SceneManager.LoadScene("Credits");
     }
+    IEnumerator PlayerWonTransition()
+	{
+		Singleton.GetInstance.robotAnim.Death();
+        ObjectPooler.instance.StopAllBalls();
+        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = false;
+        AudioManager.instance.StopAll();
+		print("LINHA 200");
+        yield return new WaitForSeconds(2f);
+		print("LINHA 201");
+        Singleton.GetInstance.sceneController.anim.SetBool("glitching",true);
+        Singleton.GetInstance.sceneController.anim2.SetBool("glitching",true);
+        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = true;
+        AudioManager.instance.Play("Transition");
+        print("LINHA 207");
+        yield return new WaitForSeconds(1.5f);
+		print("LINHA 208");
+        SetLevel();
+	}
+    public void SetLevel(){
+		if(PlayerPrefs.GetInt("Level") == 0 || !PlayerPrefs.HasKey("Level")){
+			PlayerPrefs.SetInt("Level", 1);
+			PlayerPrefs.SetInt("LevelsWon", 1);
+			
+		}
+		else if(PlayerPrefs.GetInt("Level") == 1){
+			PlayerPrefs.SetInt("Level", 2);
+			PlayerPrefs.SetInt("LevelsWon", 2);
+			SceneManager.LoadScene("GameA2");
+		}
+		else if(PlayerPrefs.GetInt("Level") == 2){
+			PlayerPrefs.SetInt("Level", 3);
+			PlayerPrefs.SetInt("LevelsWon", 3);
+			SceneManager.LoadScene("GameA3");
+		}
+		else if(PlayerPrefs.GetInt("Level") == 3){
+			PlayerPrefs.SetInt("Level", 4);
+			PlayerPrefs.SetInt("LevelsWon", 4);
+			SceneManager.LoadScene("GameA4");
+		}
+		else{
+			SceneManager.LoadScene("Victory");
+		}
+
+		PlayerPrefs.Save();
+	}
+
 }
