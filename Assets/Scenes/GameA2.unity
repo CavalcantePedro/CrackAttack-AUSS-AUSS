@@ -1623,6 +1623,7 @@ MonoBehaviour:
   robotScreen: {fileID: 2124665941}
   time: {fileID: 114568272993910645}
   robotAnim: {fileID: 0}
+  pause: {fileID: 0}
 --- !u!4 &102683161
 Transform:
   m_ObjectHideFlags: 0

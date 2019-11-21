@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shield : MonoBehaviour
 {
     [SerializeField] private float shrinkingSpeed;
-    [SerializeField] private float expandingDelay;
+    private float expandingDelay;
     [SerializeField] private float growMaxValue;
 
     [SerializeField] private bool equalGrow;
@@ -21,23 +21,24 @@ public class Shield : MonoBehaviour
     {
         StartCoroutine(ExpandingShield());
         myCollider = GetComponent<CircleCollider2D>();
+        expandingDelay = Random.Range(1.5f,3.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
      DeactivatingCollisions();
-     ConstantShrinking(); 
+     ConstantShrinking();
     }
 
     void ConstantShrinking()
     {
-        if(transform.localScale.x > 0.5f)
+        if(transform.localScale.x > 0.1f)
         {
             transform.localScale = new Vector2(transform.localScale.x - shrinkingSpeed, transform.localScale.y);
         }
 
-        if(transform.localScale.y > 0.5f)
+        if(transform.localScale.y > 0.1f)
         {
             transform.localScale = new Vector2(transform.localScale.x , transform.localScale.y - shrinkingSpeed);
         }
@@ -45,7 +46,7 @@ public class Shield : MonoBehaviour
 
     void DeactivatingCollisions()
     {
-        if(transform.localScale.x <= 0.5 && transform.localScale.y <= 0.5)
+        if(transform.localScale.x <= 0.1 && transform.localScale.y <= 0.1)
         {
             myCollider.enabled = false;
         }
@@ -94,6 +95,8 @@ public class Shield : MonoBehaviour
                 }
     
         yield return new WaitForSeconds(expandingDelay);
+        expandingDelay = Random.Range(1.5f,3.5f);
+
         }
     }
 }

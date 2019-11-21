@@ -14,7 +14,7 @@ public class RobotAnimControl : MonoBehaviour
     {
         curRobotAnim = robotAnims[PlayerPrefs.GetInt("ColorBlind")];
 
-        if(SceneManager.GetActiveScene().name == "GameA2" || SceneManager.GetActiveScene().name == "GameA2"|| SceneManager.GetActiveScene().name == "GameA4")
+        if(SceneManager.GetActiveScene().name == "GameA2" || SceneManager.GetActiveScene().name == "GameA4"|| SceneManager.GetActiveScene().name == "GameA4")
         {
             StartDancing();
         }

@@ -161,7 +161,7 @@
                 case 1:
                 // print("Entrou");
                     PlayerPrefs.SetInt("Level", levelNumber);
-                    SceneManager.LoadScene("GameA1");
+                    SceneManager.LoadScene("Cutscene");
                 break;
                 
                 case 2:
