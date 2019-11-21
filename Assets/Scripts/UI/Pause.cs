@@ -27,6 +27,7 @@ public class Pause : MonoBehaviour
             Time.timeScale = 0;
             AudioManager.instance.Pause("Glitch 3.0");
             pauseMenu.SetActive(true);
+            paused = !paused;
         }
 
         else
@@ -34,10 +35,11 @@ public class Pause : MonoBehaviour
             Time.timeScale = 1;
             AudioManager.instance.Play("Glitch 3.0");
             pauseMenu.SetActive(false);
+            StartCoroutine(ToggleVariableWithDelay());
         }
 
 
-        StartCoroutine(ToggleVariableWithDelay());
+        
     }
 
     IEnumerator ToggleVariableWithDelay()

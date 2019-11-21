@@ -107,6 +107,7 @@ public class SceneController : MonoBehaviour
         AudioManager.instance.Play("Transition");
         yield return new WaitForSeconds(1.7f);
         SceneManager.LoadScene("MainMenu");
+        AudioManager.instance.StopAll();
     }
 
     IEnumerator CreditsScene(){
