@@ -10,6 +10,8 @@ public class PixelDestroyerA : MonoBehaviour {
 	private SpriteRenderer sp;
 	private int willSpawn;
 	private bool hasColor;
+
+	private int score;
 	
 	void Start(){
 
@@ -91,46 +93,10 @@ public class PixelDestroyerA : MonoBehaviour {
 		if (Singleton.GetInstance.gm.totalPixelsDestroyed == Singleton.GetInstance.gm.totalPixels)
 		{
 				
-			int score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
+			score = Mathf.CeilToInt((Singleton.GetInstance.time.minutes * 60f + Singleton.GetInstance.time.seconds)* 100);
             
-            print("AQUI CARALHO" + score);
-			switch(SceneManager.GetActiveScene().buildIndex)
-			{
-				case 5 /*index da cena*/:
-				if(score > PlayerPrefs.GetInt("Record1") || !PlayerPrefs.HasKey("Record1"))
-			{
-				PlayerPrefs.SetInt("Record1" , score);
-				PlayerPrefs.Save();
-			}
-				break;
-
-				case 6:
-                if(score > PlayerPrefs.GetInt("Recor2") || !PlayerPrefs.HasKey("Record2"))
-			{
-				PlayerPrefs.SetInt("Record2" , score);
-				PlayerPrefs.Save();
-			}
-				break;
-
-				case 7:
-                if(score > PlayerPrefs.GetInt("Record3") || !PlayerPrefs.HasKey("Record3"))
-			{
-				PlayerPrefs.SetInt("Record3" , score);
-				PlayerPrefs.Save();
-			}
-				break;
-
-				case 8:
-                if(score > PlayerPrefs.GetInt("Record4") || !PlayerPrefs.HasKey("Record4"))
-			{
-				PlayerPrefs.SetInt("Record4" , score);
-				PlayerPrefs.Save();
-			}
-				break;
-			}
-			
-            SetLevel();
-			//SceneManager.LoadScene("GameA");
+           
+			StartCoroutine(PlayerWonTransition());
 		}
 		else if(Singleton.GetInstance.gm.heartGainPixels >= Singleton.GetInstance.gm.totalPixels * 0.35){
 			
@@ -151,7 +117,8 @@ public class PixelDestroyerA : MonoBehaviour {
 		}  
 	}
 
-	void SetLevel(){
+	void SetLevel()
+	{
 		if(PlayerPrefs.GetInt("Level") == 0 || !PlayerPrefs.HasKey("Level")){
 			PlayerPrefs.SetInt("Level", 1);
 			
@@ -188,6 +155,60 @@ public class PixelDestroyerA : MonoBehaviour {
 			Singleton.GetInstance.gm.switchSound = true;
 			print("attack");
 		}
+	}
+
+	IEnumerator PlayerWonTransition()
+	{
+		Singleton.GetInstance.robotAnim.Death();
+        ObjectPooler.instance.StopAllBalls();
+        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = false;
+        AudioManager.instance.StopAll();
+        yield return new WaitForSeconds(2f);
+        Singleton.GetInstance.sceneController.anim.SetBool("glitching",true);
+        Singleton.GetInstance.sceneController.anim2.SetBool("glitching",true);
+        GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = true;
+        AudioManager.instance.Play("Transition");
+        
+        yield return new WaitForSeconds(1.5f);
+
+		switch(SceneManager.GetActiveScene().buildIndex)
+			{
+				case 5 /*index da cena*/:
+				if(score > PlayerPrefs.GetInt("Record1") || !PlayerPrefs.HasKey("Record1"))
+			{
+				PlayerPrefs.SetInt("Record1" , score);
+				PlayerPrefs.Save();
+			}
+				break;
+
+				case 6:
+                if(score > PlayerPrefs.GetInt("Recor2") || !PlayerPrefs.HasKey("Record2"))
+			{
+				PlayerPrefs.SetInt("Record2" , score);
+				PlayerPrefs.Save();
+			}
+				break;
+
+				case 7:
+                if(score > PlayerPrefs.GetInt("Record3") || !PlayerPrefs.HasKey("Record3"))
+			{
+				PlayerPrefs.SetInt("Record3" , score);
+				PlayerPrefs.Save();
+			}
+				break;
+
+				case 8:
+                if(score > PlayerPrefs.GetInt("Record4") || !PlayerPrefs.HasKey("Record4"))
+			{
+				PlayerPrefs.SetInt("Record4" , score);
+				PlayerPrefs.Save();
+			}
+				break;
+			}
+			
+            SetLevel();
+			//SceneManager.LoadScene("GameA");
+			yield return null;
 	}
 
 }

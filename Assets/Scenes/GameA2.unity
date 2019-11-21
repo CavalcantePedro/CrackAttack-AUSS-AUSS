@@ -1622,6 +1622,7 @@ MonoBehaviour:
     type: 3}
   robotScreen: {fileID: 2124665941}
   time: {fileID: 114568272993910645}
+  robotAnim: {fileID: 0}
 --- !u!4 &102683161
 Transform:
   m_ObjectHideFlags: 0
@@ -7886,7 +7887,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532668353}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2b04b5832008677409f7535452e44a27, type: 2}
   m_CullingMode: 0
