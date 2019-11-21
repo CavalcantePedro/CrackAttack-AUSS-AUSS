@@ -5770,10 +5770,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684366054}
     m_Modifications:
-    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
-      propertyPath: m_Name
-      value: Glitch
-      objectReference: {fileID: 0}
     - target: {fileID: 224993315681137182, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5893,6 +5889,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
+      propertyPath: m_Name
+      value: Glitch
       objectReference: {fileID: 0}
     - target: {fileID: 3273582687428103981, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}

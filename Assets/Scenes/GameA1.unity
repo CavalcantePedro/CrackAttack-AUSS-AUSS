@@ -5824,8 +5824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robots:
   - {fileID: 324926389}
-  - {fileID: 1901472917}
   - {fileID: 1868387156}
+  - {fileID: 1901472917}
   - {fileID: 486975166}
   pinkTxt: {fileID: 8653932409832206352}
   greenTxt: {fileID: 2924549776822453415}
@@ -7080,7 +7080,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486975166}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3200ce0842fc77242aebbe025f2c93f5, type: 2}
   m_CullingMode: 0
@@ -31283,7 +31283,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868387156}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 14df7dd5ca9ac254ab0dd9ffe84e2418, type: 2}
   m_CullingMode: 0
@@ -32583,7 +32583,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901472917}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1fcfa67188097a64780e540fb3153d53, type: 2}
   m_CullingMode: 0

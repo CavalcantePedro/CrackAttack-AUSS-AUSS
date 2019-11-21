@@ -40,20 +40,21 @@ public class GameColorBlind : MonoBehaviour
                 Singleton.GetInstance.ssHeartColors[2] = originalColor[1];
                // print("Ori");
             break;
-
+           
             case 1:
+                Singleton.GetInstance.ssHeartColors[0] = mon[0];
+                Singleton.GetInstance.ssHeartColors[1] = mon[2];
+                Singleton.GetInstance.ssHeartColors[2] = mon[1];
+               // print("Mon");
+            break;
+
+            case 2:
                 Singleton.GetInstance.ssHeartColors[0] = dic[0];
                 Singleton.GetInstance.ssHeartColors[1] = dic[2];
                 Singleton.GetInstance.ssHeartColors[2] = dic[1];
                // print("Dic");
             break;
 
-            case 2:
-                Singleton.GetInstance.ssHeartColors[0] = mon[0];
-                Singleton.GetInstance.ssHeartColors[1] = mon[2];
-                Singleton.GetInstance.ssHeartColors[2] = mon[1];
-               // print("Mon");
-            break;
 
             case 3:
                 Singleton.GetInstance.ssHeartColors[0] = tri[0];
