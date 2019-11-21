@@ -25,7 +25,7 @@ public class ArrowsController : MoveController {
 
     private void Update()
     {
-        print(speed);
+       
         if (paddle.ballCount > 0 && ballShot.rotZ > 0)
         {
             if (Input.GetMouseButton(0) && !isClicking)
