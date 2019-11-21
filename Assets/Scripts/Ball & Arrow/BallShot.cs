@@ -31,14 +31,17 @@ public class BallShot : MonoBehaviour {
 
 
 	void Update ()
-    {
-		Vector3 difference = Difference();
-		rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+    {	
+		if(!Singleton.GetInstance.pause.paused)
+		{	
+			Vector3 difference = Difference();
+			rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-		if(rotZ >= 0)
-		{
-			rotZ = Mathf.Clamp(rotZ, limits[0], limits[1]);
-			transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+			if(rotZ >= 0)
+			{
+				rotZ = Mathf.Clamp(rotZ, limits[0], limits[1]);
+				transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+			}
 		}
 	}
 
@@ -61,20 +64,24 @@ public class BallShot : MonoBehaviour {
 		joystickFollow = joy;
 	}
 
-	public void Shot(PaddleController playerScript) {
+	public void Shot(PaddleController playerScript) 
+	{
+		if(!Singleton.GetInstance.pause.paused)
+		{
 
-		var obj =  ObjectPooler.instance.GetPooledObject();
+			var obj =  ObjectPooler.instance.GetPooledObject();
 
-		SpriteRenderer sp = obj.GetComponentInChildren<SpriteRenderer>();
-		sp.color = paddleSprite.color;
-		obj.tag = SetTag(sp.color);
-		
-		if(obj != null){
-			obj.transform.position = transform.position;
-			obj.SetActive(true);
-			if(AudioManager.instance != null)
-				AudioManager.instance.Play("Shot");
-			playerScript.DecreasingBalls();
+			SpriteRenderer sp = obj.GetComponentInChildren<SpriteRenderer>();
+			sp.color = paddleSprite.color;
+			obj.tag = SetTag(sp.color);
+			
+			if(obj != null){
+				obj.transform.position = transform.position;
+				obj.SetActive(true);
+				if(AudioManager.instance != null)
+					AudioManager.instance.Play("Shot");
+				playerScript.DecreasingBalls();
+			}
 		}
 	}
 

@@ -44,6 +44,7 @@ public class Singleton : MonoBehaviour {
 	public TimerCount time;
 
 	public RobotAnimControl robotAnim;
+	public Pause pause;
 
     private static Singleton instance;
 
