@@ -8,16 +8,6 @@ public class GameOverLevelSelect : MonoBehaviour
     
     public void GameInit()
 	{
-		if (PlayerPrefs.GetString("Dificuldade") == "Hard")
-		{
-            SceneManager.LoadScene(sceneBuildIndex: 2);
-          
-		}
-		else 
-		{
-             SceneManager.LoadScene(sceneBuildIndex: 6);   
-		}
-
-		
+		SceneManager.LoadScene(PlayerPrefs.GetString("PreviousScene"));
 	}
 }

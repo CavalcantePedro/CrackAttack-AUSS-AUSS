@@ -33,10 +33,14 @@ public class PlayerLosedTransition : MonoBehaviour {
         GameObject.Find("NICE FX CAMERA").GetComponent<AudioListener>().enabled = true;
         AudioManager.instance.Play("Transition");
         
+        SetPreviousScene();
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(sceneBuildIndex: 2);
         
+    }
 
+    public void SetPreviousScene()
+    {
+        PlayerPrefs.SetString("PreviousScene",SceneManager.GetActiveScene().name);
     }
 }
-   
