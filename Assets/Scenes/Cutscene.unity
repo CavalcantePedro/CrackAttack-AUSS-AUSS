@@ -415,7 +415,7 @@ MonoBehaviour:
   source: {fileID: 620602968}
   amnVisual: 10
   visualModifier: 2500
-  smoothSpeed: 10
+  smoothSpeed: 12
   maxVisualScale: 5
   keepPercentage: 0.5
   tile: {fileID: 3143035656148819920, guid: dea1bc29ee2cde6499feb70e626d47ff, type: 3}
@@ -429,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620602967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.45, z: 90}
+  m_LocalPosition: {x: 0, y: -5.99, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -566,7 +566,7 @@ MonoBehaviour:
   source: {fileID: 622236227}
   amnVisual: 10
   visualModifier: 2500
-  smoothSpeed: 10
+  smoothSpeed: 12
   maxVisualScale: 5
   keepPercentage: 0.5
   tile: {fileID: 3143035656148819920, guid: dea1bc29ee2cde6499feb70e626d47ff, type: 3}
@@ -580,7 +580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622236226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.45, z: 90}
+  m_LocalPosition: {x: 0, y: -5.99, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -711,14 +711,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1324675250}
     m_Modifications:
-    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
-      propertyPath: m_Name
-      value: Glitch
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224993315681137182, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -823,6 +815,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
+      propertyPath: m_Name
+      value: Glitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2256946259460761528, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}
@@ -1078,6 +1078,8 @@ MonoBehaviour:
   collectableHeart: {fileID: 0}
   robotScreen: {fileID: 0}
   time: {fileID: 0}
+  robotAnim: {fileID: 0}
+  pause: {fileID: 0}
 --- !u!114 &1863425185
 MonoBehaviour:
   m_ObjectHideFlags: 0
