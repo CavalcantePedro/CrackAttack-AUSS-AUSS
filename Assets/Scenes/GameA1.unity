@@ -8280,6 +8280,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 224424601507626645}
     m_Modifications:
+    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
+      propertyPath: m_Name
+      value: Glitch
+      objectReference: {fileID: 0}
     - target: {fileID: 224993315681137182, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8384,10 +8388,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
-      propertyPath: m_Name
-      value: Glitch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
@@ -23280,6 +23280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 1675259415499092, guid: 4709c55a77d179644a2eda6323422da5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4891921120783684, guid: 4709c55a77d179644a2eda6323422da5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -26688,7 +26692,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrinkingSpeed: 0.15
-  expandingDelay: 0.5
   growMaxValue: 1
   equalGrow: 1
 --- !u!1 &1514815873
@@ -38711,6 +38714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4498996965226364062}
     m_Modifications:
+    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
+      propertyPath: m_Name
+      value: Glitch
+      objectReference: {fileID: 0}
     - target: {fileID: 224993315681137182, guid: 1caef735a8c80694d924458c42a172f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38815,10 +38822,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122082615183678, guid: 1caef735a8c80694d924458c42a172f2, type: 3}
-      propertyPath: m_Name
-      value: Glitch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1caef735a8c80694d924458c42a172f2, type: 3}

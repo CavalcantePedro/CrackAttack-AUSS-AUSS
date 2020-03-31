@@ -41,7 +41,9 @@ public class PainelController : MonoBehaviour
     }
 
     public void RightBtn(){
-        if(index == 2){
+        if(index == 2)
+        //o valor foi alterado para um para remover o daltonismo , voltar para 2 em breve
+        {
             pnAnim.SetTrigger("SlideLeft_0");
             right.SetActive(true);
             index--;

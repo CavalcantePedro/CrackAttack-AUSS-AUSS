@@ -13,30 +13,35 @@ public class SceneScript : MonoBehaviour {
     }
 
     private void Start() {
-        
 
-       /*  if (SceneManager.GetActiveScene().buildIndex == 4)
-        {          
-            delay = 30f;
-            Invoke("CreditsToMenu", delay);
-        }*/
 
-        if(SceneManager.GetActiveScene().name == "FirstTimeSettings")
+        /*  if (SceneManager.GetActiveScene().buildIndex == 4)
+         {          
+             delay = 30f;
+             Invoke("CreditsToMenu", delay);
+         }*/
+
+        if (SceneManager.GetActiveScene().name == "FirstTimeSettings")
         {
-            if(!PlayerPrefs.HasKey("FirstTimeSettings"))
+            if (!PlayerPrefs.HasKey("FirstTimeSettings"))
             {
                 PlayerPrefs.SetInt("FirstTimeSettings", 1);
             }
-            
+
             else
             {
-               SceneManager.LoadScene("MainMenu");
+                SceneManager.LoadScene("MainMenu");
             }
         }
 
-        else if(SceneManager.GetActiveScene().name == "Cutscene")
+        else if (SceneManager.GetActiveScene().name == "Cutscene")
         {
             delay = 25f;
+            Invoke("Cutscene", delay);
+        }
+        else if (SceneManager.GetActiveScene().name == "CutsceneProvisoria")
+        {
+            delay = 10f;
             Invoke("Cutscene", delay);
         }
         else
