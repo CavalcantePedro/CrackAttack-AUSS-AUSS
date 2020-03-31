@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: a8aef4c58855d494e823cf726ccdf1bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2084254408721968849
+    second: seta menu_0
+  - first:
+      213: 2210206588752979404
+    second: seta menu_1
+  - first:
+      213: 5200413175563158358
+    second: seta menu_2
+  - first:
+      213: 6092522140317981342
+    second: seta menu_3
+  - first:
+      213: 2788897106986093045
+    second: seta menu_4
+  - first:
+      213: 5360466232020259134
+    second: seta menu_5
+  - first:
+      213: -883637104498103673
+    second: seta menu_6
+  - first:
+      213: 8315330886046370379
+    second: seta menu_7
+  - first:
+      213: -8326911321309146841
+    second: seta menu_8
+  - first:
+      213: 1173629071507880641
+    second: seta menu_9
+  - first:
+      213: 1829779953034907141
+    second: seta menu_10
+  - first:
+      213: 1375252441302618181
+    second: seta menu_11
+  - first:
+      213: 8328537736649239525
+    second: seta menu_12
+  - first:
+      213: -4936919879689283317
+    second: seta menu_13
+  - first:
+      213: -5600719429345532775
+    second: seta menu_14
+  - first:
+      213: -2704770971853078083
+    second: seta menu_15
+  - first:
+      213: -4171322904742385313
+    second: seta menu_16
+  - first:
+      213: -1771722788473148197
+    second: seta menu_17
+  - first:
+      213: 3425393294041173973
+    second: seta menu_18
+  - first:
+      213: -3385422979299399130
+    second: seta menu_19
+  - first:
+      213: 5578648775491203213
+    second: seta menu_20
+  - first:
+      213: -66373201769348962
+    second: seta menu_21
+  - first:
+      213: 1701420914065162776
+    second: seta menu_22
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: seta menu_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2654
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a8f59121fccf44bbd5b1a1749ebe1b
+      internalID: 2084254408721968849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_1
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2654
+        width: 212
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2294c763c45c11b44933388af8fc596f
+      internalID: 2210206588752979404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_2
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 2654
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bd250d1139a5442ae46f7b2e069245
+      internalID: 5200413175563158358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_3
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 2654
+        width: 212
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dc0ec2a38aa5a42a844370e8059745
+      internalID: 6092522140317981342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2143
+        width: 211
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbe62d8f10c45444bb71282a926a331
+      internalID: 2788897106986093045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_5
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2143
+        width: 212
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022294ff7b65c4748925c42acd1fa240
+      internalID: 5360466232020259134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_6
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 2143
+        width: 211
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f48f560a2e8cea4c807ee7136e52f37
+      internalID: -883637104498103673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_7
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 2143
+        width: 212
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba60b631a26564d4eb4c63c43c8d5fed
+      internalID: 8315330886046370379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_8
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1630
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97adc7dd321c64e4bb28c07c333779a2
+      internalID: -8326911321309146841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_9
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1630
+        width: 212
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15355ded9f5f53849a26110f1a961f4e
+      internalID: 1173629071507880641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_10
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 1630
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ec160b8515daa439dce860f50fb412
+      internalID: 1829779953034907141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_11
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 1630
+        width: 212
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c051818b3c70b084a99cfd122284c072
+      internalID: 1375252441302618181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_12
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1118
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bacf8c1cf82eab4a8ff98bcf6ff64ed
+      internalID: 8328537736649239525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_13
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1118
+        width: 212
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4801a11dc50503442a3e543d05db8579
+      internalID: -4936919879689283317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_14
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 1118
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d38eb0a3afb774b9d186249956be01
+      internalID: -5600719429345532775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_15
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 1118
+        width: 212
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3942ec0ca7bf66f4f823b4d2fc95573c
+      internalID: -2704770971853078083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_16
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 607
+        width: 211
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fed9cb99baf7444be0473e4ee6bf80
+      internalID: -4171322904742385313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_17
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 607
+        width: 212
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89941f03f506244f914fc0e416d5174
+      internalID: -1771722788473148197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_18
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 607
+        width: 211
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7663d284878296940a9c485f8275513c
+      internalID: 3425393294041173973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_19
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 607
+        width: 212
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e7aa5e1bc14e044aba6cf661d6b53d
+      internalID: -3385422979299399130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_20
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 94
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a333412ce1f6c524a8ee7868bbb8eb55
+      internalID: 5578648775491203213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_21
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 94
+        width: 212
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98905443bd2811747a19a3d5e2c900ca
+      internalID: -66373201769348962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seta menu_22
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 94
+        width: 211
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadbd46efd3d62f49913f83783105a04
+      internalID: 1701420914065162776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

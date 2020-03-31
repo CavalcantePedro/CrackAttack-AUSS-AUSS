@@ -145,10 +145,25 @@
      void ShowingRecord() {
         if(recordPlayer > 0) {
             //recordSt = PlayerPrefs.GetInt(recordPlayerPref).ToString();
-            recordText.text ="Record:" + recordPlayer.ToString();
+            if (PlayerPrefs.GetInt("Language") == 0)
+            {
+                recordText.text = "Record:" + recordPlayer.ToString();
+            }
+
+            else
+            {
+                recordText.text = "Recorde:" + recordPlayer.ToString();
+            }
         }
         else {
-            recordText.text = "Record:0";
+            if (PlayerPrefs.GetInt("Language") == 0)
+            {
+                recordText.text = "Record:0";
+            }
+            else
+            {
+                recordText.text = "Recorde:0";
+            }
         }
     }
         public void GameInit(){
@@ -161,7 +176,7 @@
                 case 1:
                 // print("Entrou");
                     PlayerPrefs.SetInt("Level", levelNumber);
-                    SceneManager.LoadScene("Cutscene");
+                    SceneManager.LoadScene("CutsceneProvisoria");
                 break;
                 
                 case 2:

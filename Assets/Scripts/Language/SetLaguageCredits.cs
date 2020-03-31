@@ -8,6 +8,10 @@ public class SetLaguageCredits : MonoBehaviour
 
     [SerializeField] private Text credits;
 
+    [SerializeField] private Text privacyPolicy;
+
+
+
     void Start()
     {
         LanguageUpdate();        
@@ -54,6 +58,9 @@ public class SetLaguageCredits : MonoBehaviour
                         "\nAndré Oliveira"+
                         "\nLuiz Eduardo Brayner"+
                         "\n\nYoutuber: Geri";
+
+        privacyPolicy.text = "Privacy Policy:" +
+                             "\n\nhttps://cavalcantepedro.github.io/CrackAttack-AUSS-AUSS/";
     }
 
     void SetPortuguese(){
@@ -84,5 +91,8 @@ public class SetLaguageCredits : MonoBehaviour
                         "\nAndré Oliveira"+
                         "\nLuiz Eduardo Brayner"+
                         "\n\nYoutuber : Geri";
+
+        privacyPolicy.text = "Politica de Privacidade:" +
+                             "\n\nhttps://cavalcantepedro.github.io/CrackAttack-AUSS-AUSS/";
     }
 }
